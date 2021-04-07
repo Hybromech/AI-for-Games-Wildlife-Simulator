@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{37c604d3-67ba-44a6-b016-6cea04824d2f}</ProjectGuid>
     <RootNamespace>DijkstrasAlgorithm</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -42,8 +42,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -79,7 +79,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\Programming stuff\RayLibC++\Raylib\include;E:\glm_master;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\Programming stuff\RayLibC++\Raylib\bin\x64\Debug;$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\Programming stuff\RayLibC++\Raylib\bin\x64\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -150,6 +150,7 @@
     <ClCompile Include="MapReader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\Programming stuff\RayLibC++\Raylib\include\raylib.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="MakeNodeGrid.h" />
     <ClInclude Include="MapReader.h" />

@@ -3,11 +3,12 @@
 #include "MakeNodeGrid.h"
 #include "vector"
 
-std::vector<Node> BuildmodeGraph(const MapObject& mo, float* terrain) { 
+
+std::vector<Node> BuildmodeGraph(const MapObject& mo, int tilesize, float* terrain) { 
 	std::vector<Node> graph;
 	graph.resize(mo.info.size());
 	
-	for (int id = 0; id < mo.info.size(); ++id){
+	for (int id = 0; id < mo.info.size(); ++id){ // DJ BUG 5 the map file had a new line at the end making it 101 in size and going behond vector length
 		const int x = id % mo.x;
 		const int y = id / mo.x;
 
@@ -21,7 +22,20 @@ std::vector<Node> BuildmodeGraph(const MapObject& mo, float* terrain) {
 		int goUp = mo.x;
 		int goDown = -mo.x;
 
+		bool addupLeft = addLeft && addUp;
+		bool addupRight = addRight && addUp;
+		bool adddownleft = addDown && addLeft;
+		bool adddownright   = addDown && addRight;
+		
+		
+
+		int goUpLeft   = goLeft + goUp;
+		int goUpRight  = goUp + goRight;
+		int goDownLeft = goDown + goLeft;
+		int goDownRight= goDown + goRight;
+
 		graph[id].name = id;
+		graph[id].position = glm::vec2{ x * tilesize + tilesize / 2, y * tilesize + tilesize / 2 };
 
 		auto AddConnection = [&](bool canDirection, int offest,float distance = 1.0f) {
 			if (canDirection) { 
@@ -36,6 +50,11 @@ std::vector<Node> BuildmodeGraph(const MapObject& mo, float* terrain) {
 		AddConnection(addRight, goRight);
 		AddConnection(addUp, goUp);
 		AddConnection(addDown, goDown);
+
+		AddConnection(addupLeft, goUpLeft);
+		AddConnection(addupRight, goUpRight);
+		AddConnection(adddownleft, goDownLeft);
+		AddConnection(adddownright, goDownRight);
 	}
 
 	return graph;

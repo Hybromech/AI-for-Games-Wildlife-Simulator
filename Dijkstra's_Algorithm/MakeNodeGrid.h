@@ -6,4 +6,4 @@
 
 const float impassable = -1;
 
-std::vector<Node> BuildmodeGraph(const MapObject& mo, float* terrain);
+std::vector<Node> BuildmodeGraph(const MapObject& mo, int tilesize, float* terrain);

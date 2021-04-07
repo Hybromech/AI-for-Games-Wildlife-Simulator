@@ -3,11 +3,17 @@
 #include <vector>
 #include <sstream>
 #include "MapReader.h"
+#include <iostream>
+
 
 MapObject ReadaMapInfo(std::string filename) {
 	std::fstream filein(filename);
-	if (!filein.is_open())
-		return MapObject();
+	if (!filein.is_open())//openening it and checking
+	{
+		std::cout << "Error loadin file" << std::endl;
+		return MapObject{};		
+	}
+		
 
 	std::string line;
 
