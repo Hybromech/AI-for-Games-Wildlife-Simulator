@@ -27,6 +27,7 @@
 #include "Chase.h"
 #include "SteeringBehaviour.h"
 #include "SeekForce.h"
+#include "PathFollowBehaviour.h"
 
 class ManagedTexture
 {
@@ -52,26 +53,27 @@ int main(int argc, char* argv[])
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
     
-    SetTargetFPS(60);
+    SetTargetFPS(75);
 
     Texture bugs = LoadTexture("textures/bugs.png");
 
     std::vector<Agent*> agents;//List of agents.
-    
-    Agent* player = new Agent(bugs);
+    auto path = new Behaviours::PathFollowBehaviour(20);
+
+    /*Agent* player = new Agent(bugs);
     player->AddBehaviour(new InstantKeyboard(20000));
     player->max_speed = 20000;
-    agents.push_back(player);
+    agents.push_back(player);*/
     
-    SeekForce* sf = new SeekForce(player);
-    SteeringBehaviour* steering = new SteeringBehaviour(sf);
+    //SeekForce* sf = new SeekForce(player);
+    //SteeringBehaviour* steering = new SteeringBehaviour(sf);
     
     //These bugs hunt the player
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 10; i++) {//Add bugs
         Agent* bug = new Agent(bugs);//Heap allocated.
         bug->initial_frame_y = i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
         //bug->AddBehaviour(new Chase(player, 8000));
-        bug->AddBehaviour(steering);//Add a steering behaviour
+        bug->AddBehaviour(path);//Add a steering behaviour
         bug->SetPosition({ 100 + 20*i, 100 });
         bug->max_speed = 100 + i * 20;
         
@@ -79,19 +81,19 @@ int main(int argc, char* argv[])
         agents.push_back(bug);
     }
     //These bugs flee from the player.
-    FleeForce* ff = new FleeForce(player);
-    SteeringBehaviour* fleesteering = new SteeringBehaviour(ff);
-    for (int i = 0; i < 10; i++) {
-        Agent* bug = new Agent(bugs);//Heap allocated.
-        bug->initial_frame_y = i % 7 * 2 + 1; //Pick any bug except yellow. could also read from file.
-        //bug->AddBehaviour(new Chase(player, 8000));
-        bug->AddBehaviour(fleesteering);//Add a steering behaviour
-        bug->SetPosition({ 100 + 20 * i, 100 });
-        bug->max_speed = 20 + i * 5;
+    //FleeForce* ff = new FleeForce(player);
+    //SteeringBehaviour* fleesteering = new SteeringBehaviour(ff);
+    //for (int i = 0; i < 10; i++) {
+    //    Agent* bug = new Agent(bugs);//Heap allocated.
+    //    bug->initial_frame_y = i % 7 * 2 + 1; //Pick any bug except yellow. could also read from file.
+    //    //bug->AddBehaviour(new Chase(player, 8000));
+    //    bug->AddBehaviour(fleesteering);//Add a steering behaviour
+    //    bug->SetPosition({ 100 + 20 * i, 100 });
+    //    bug->max_speed = 20 + i * 5;
 
 
-        agents.push_back(bug);
-    }
+    //    agents.push_back(bug);
+    //}
     
     float deltaTime = 0;
 

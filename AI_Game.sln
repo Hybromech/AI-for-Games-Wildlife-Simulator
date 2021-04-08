@@ -5,6 +5,46 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AI_Game", "AI_Game.vcxproj", "{0CEAAC5A-F742-43D7-BEF3-1CD5BB8F4BB3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behaviours", "Behaviours", "{80317E1C-BEF4-4B49-AC55-63CEA3B87A10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Path FInding", "Path FInding", "{97EDD18A-C3B8-419E-ACB4-3EA32A8645F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Headers", "Headers", "{C6078A7D-CC23-43A0-8A0A-3B4ACA66EA8E}"
+	ProjectSection(SolutionItems) = preProject
+		Agent.h = Agent.h
+		Behaviours\Behaviour.h = Behaviours\Behaviour.h
+		Behaviours\Chase.h = Behaviours\Chase.h
+		Behaviours\InstantKeyboard.h = Behaviours\InstantKeyboard.h
+		Behaviours\KeyboardBehaviour.h = Behaviours\KeyboardBehaviour.h
+		Behaviours\PathFollowBehaviour.h = Behaviours\PathFollowBehaviour.h
+		Behaviours\SeekForce.h = Behaviours\SeekForce.h
+		Behaviours\SteeringBehaviour.h = Behaviours\SteeringBehaviour.h
+		Behaviours\SteeringForce.h = Behaviours\SteeringForce.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{4CCA487D-D828-432C-83CF-1D10C9C7B0F5}"
+	ProjectSection(SolutionItems) = preProject
+		Agent.cpp = Agent.cpp
+		Behaviours\Chase.cpp = Behaviours\Chase.cpp
+		Behaviours\InstantKeyboard.cpp = Behaviours\InstantKeyboard.cpp
+		Behaviours\KeyboardBehaviour.cpp = Behaviours\KeyboardBehaviour.cpp
+		Behaviours\PathFollowBehaviour.cpp = Behaviours\PathFollowBehaviour.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{F7E9E602-A1B1-4F50-87AD-08E0857F604F}"
+	ProjectSection(SolutionItems) = preProject
+		Path_Finding\DijkstrasSearch.cpp = Path_Finding\DijkstrasSearch.cpp
+		Path_Finding\MakeNodeGrid.cpp = Path_Finding\MakeNodeGrid.cpp
+		Path_Finding\MapReader.cpp = Path_Finding\MapReader.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Headers", "Headers", "{5004940D-615D-4806-B308-86B18A07E38E}"
+	ProjectSection(SolutionItems) = preProject
+		Path_Finding\Graph.h = Path_Finding\Graph.h
+		Path_Finding\MakeNodeGrid.h = Path_Finding\MakeNodeGrid.h
+		Path_Finding\MapReader.h = Path_Finding\MapReader.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -24,6 +64,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C6078A7D-CC23-43A0-8A0A-3B4ACA66EA8E} = {80317E1C-BEF4-4B49-AC55-63CEA3B87A10}
+		{4CCA487D-D828-432C-83CF-1D10C9C7B0F5} = {80317E1C-BEF4-4B49-AC55-63CEA3B87A10}
+		{F7E9E602-A1B1-4F50-87AD-08E0857F604F} = {97EDD18A-C3B8-419E-ACB4-3EA32A8645F0}
+		{5004940D-615D-4806-B308-86B18A07E38E} = {97EDD18A-C3B8-419E-ACB4-3EA32A8645F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AB70D05-0BCE-4BA0-800D-EB64E5C67E7C}
