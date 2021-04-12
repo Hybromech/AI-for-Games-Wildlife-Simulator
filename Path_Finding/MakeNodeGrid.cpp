@@ -27,8 +27,6 @@ std::vector<Node> BuildmodeGraph(const MapObject& mo, int tilesize, float* terra
 		bool adddownleft = addDown && addLeft;
 		bool adddownright   = addDown && addRight;
 		
-		
-
 		int goUpLeft   = goLeft + goUp;
 		int goUpRight  = goUp + goRight;
 		int goDownLeft = goDown + goLeft;

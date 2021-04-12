@@ -11,7 +11,7 @@ Agent::~Agent() {};
 
 void Agent::Update(float deltaTime){
 	m_force = {0,0};
-	for (auto& b : m_behaviours) {
+	for (auto b : m_behaviours) {
 		b->Update(this,deltaTime);
 	}
 	m_velocity += m_force * deltaTime;

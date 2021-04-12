@@ -78,7 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\Programming stuff\RayLibC++\Raylib\include;E:\glm_master;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\Programming stuff\RayLibC++\Raylib\bin\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\Programming stuff\RayLibC++\Raylib\bin\x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -119,11 +119,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game;D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding;D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>raylib.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game;D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding;D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -145,23 +147,38 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
-    <ClCompile Include="Chase.cpp" />
-    <ClCompile Include="InstantKeyboard.cpp" />
-    <ClCompile Include="KeyboardBehaviour.cpp" />
+    <ClCompile Include="Behaviours\Chase.cpp" />
+    <ClCompile Include="Behaviours\InstantKeyboard.cpp" />
+    <ClCompile Include="Behaviours\KeyboardBehaviour.cpp" />
+    <ClCompile Include="Behaviours\PathFollowBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Path_Finding\DijkstrasSearch.cpp" />
+    <ClCompile Include="Path_Finding\MakeNodeGrid.cpp" />
+    <ClCompile Include="Path_Finding\MapReader.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
-    <ClInclude Include="Behaviour.h" />
-    <ClInclude Include="Chase.h" />
-    <ClInclude Include="InstantKeyboard.h" />
-    <ClInclude Include="KeyboardBehaviour.h" />
-    <ClInclude Include="SeekForce.h" />
-    <ClInclude Include="SteeringBehaviour.h" />
-    <ClInclude Include="SteeringForce.h" />
+    <ClInclude Include="Behaviours\Behaviour.h" />
+    <ClInclude Include="Behaviours\Chase.h" />
+    <ClInclude Include="Behaviours\InstantKeyboard.h" />
+    <ClInclude Include="Behaviours\KeyboardBehaviour.h" />
+    <ClInclude Include="Behaviours\PathFollowBehaviour.h" />
+    <ClInclude Include="Behaviours\SeekForce.h" />
+    <ClInclude Include="Behaviours\SteeringBehaviour.h" />
+    <ClInclude Include="Behaviours\SteeringForce.h" />
+    <ClInclude Include="ChasePlayerState.h" />
+    <ClInclude Include="Path_Finding\Graph.h" />
+    <ClInclude Include="Path_Finding\MakeNodeGrid.h" />
+    <ClInclude Include="Path_Finding\MapReader.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateMachine.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="robot_sprite1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Path_Finding\Map.map" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

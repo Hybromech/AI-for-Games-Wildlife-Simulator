@@ -14,8 +14,12 @@ void Behaviours::PathFollowBehaviour::SetPath(const Path& path) { //create new p
 
 bool Behaviours::PathFollowBehaviour::Update(Agent* agent, float deltatime) {
 	//If at end stop.
-	if (next_node >= current_path.size() - 1)
+	if (next_node >= current_path.size()) {
+		glm::vec2 vec{ 0 };
+		agent->SetVelocity(vec);
 		return false;
+	}
+		
 	//work out vector towards next goat node
 	//move toward next goal node
 	//if we reatch it
