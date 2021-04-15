@@ -20,9 +20,9 @@ bool Behaviours::PathFollowBehaviour::Update(Agent* agent, float deltatime) {
 		return false;
 	}
 		
-	//work out vector towards next goat node
+	//work out vector towards next goal node
 	//move toward next goal node
-	//if we reatch it
+	//if we reach it
 	//advance goal to next node in path
 	//if we reach the end
 	//reverse stop or whatever.

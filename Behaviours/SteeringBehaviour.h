@@ -17,6 +17,5 @@ namespace Behaviours
 		{
 			agent->AddForce(force->GetForce(agent));
 		}
-
 	};
 }

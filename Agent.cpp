@@ -2,18 +2,27 @@
 #include "Behaviour.h"
 #include <raylib.h>
 #include <string>
+#include "ChasePlayerState.h"
 
 int screenx = 200; //Dirty don't use
 int screeny = 200; //Dirty don't use
 
-Agent::Agent(Texture t) : texture{ t } {};//Initialse colour with the item passed into the constructor.
+
+
+Agent::Agent(Texture t, StateMachine* s) : texture{ t }, sm(s)  {
+
+	sm->requestStateChange(this,new ChasePlayerState());
+};//Initialse colour with the item passed into the constructor.
 Agent::~Agent() {};
 
-void Agent::Update(float deltaTime){
+
+void Agent::Update(float deltaTime, StateMachine* sm){
+	
 	m_force = {0,0};
-	for (auto b : m_behaviours) {
-		b->Update(this,deltaTime);
-	}
+	sm->update(this,sm);
+	//for (auto b : m_behaviours) { //Update all behaviours 
+	//	b->Update(this,deltaTime);
+	//}
 	m_velocity += m_force * deltaTime;
 #ifndef NDEBUG
 	////Draw velocity vector.

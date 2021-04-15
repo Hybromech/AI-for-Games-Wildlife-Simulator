@@ -4,21 +4,25 @@
 #include <memory>
 #include <glm/glm.hpp>
 #include <raylib.h>
+#include "StateMachine.h"
 
 extern int screenx; //Dirty don't use
 extern int screeny; //Dirty don't use
 
 class Behaviour; //Use forward declare instead of include as much as possible.
+class StateMachine;
+
 class Agent
 {
-public:
-	Agent(Texture t);
+	public:
+	Agent(Texture t, StateMachine* sm);
 	~Agent();
 
-	virtual void Update(float deltaTime);
+	virtual void Update(float deltaTime, StateMachine* sm);
 	virtual void Draw();
 
 	void AddBehaviour(Behaviour*);
+	
 
 	//Movement functions
 	void SetPosition(glm::vec2 position);
@@ -28,7 +32,7 @@ public:
 	void AddForce(glm::vec2 force); //Mostly used by Behaviours
 
 	float max_speed = 200;
-	float max_force;
+	float max_force = 0;
 
 	//Animation
 	int initial_frame_x = 4;
@@ -42,6 +46,7 @@ private:
 	glm::vec2 m_velocity = { 0,0 }; 
 	glm::vec2 m_force = { 0,0 };
 
-	Color colour;
+	Color colour{0,0,0};
 	Texture texture;
+	StateMachine* sm;
 };

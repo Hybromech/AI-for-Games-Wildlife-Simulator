@@ -6,5 +6,6 @@ class Agent;
 	{
 		public:
 		virtual bool Update(Agent*, float deltatime) = 0;
+		virtual bool Update(glm::vec2, float deltatime) = 0;
 	};
 

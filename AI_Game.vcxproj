@@ -151,11 +151,14 @@
     <ClCompile Include="Behaviours\InstantKeyboard.cpp" />
     <ClCompile Include="Behaviours\KeyboardBehaviour.cpp" />
     <ClCompile Include="Behaviours\PathFollowBehaviour.cpp" />
+    <ClCompile Include="Behaviours\Timer.cpp" />
+    <ClCompile Include="ChasePlayerState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Path_Finding\DijkstrasSearch.cpp" />
     <ClCompile Include="Path_Finding\MakeNodeGrid.cpp" />
     <ClCompile Include="Path_Finding\MapReader.cpp" />
     <ClCompile Include="StateMachine.cpp" />
+    <ClCompile Include="WanderState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
@@ -167,6 +170,7 @@
     <ClInclude Include="Behaviours\SeekForce.h" />
     <ClInclude Include="Behaviours\SteeringBehaviour.h" />
     <ClInclude Include="Behaviours\SteeringForce.h" />
+    <ClInclude Include="Behaviours\Wander_Circle.h" />
     <ClInclude Include="ChasePlayerState.h" />
     <ClInclude Include="Path_Finding\Graph.h" />
     <ClInclude Include="Path_Finding\MakeNodeGrid.h" />

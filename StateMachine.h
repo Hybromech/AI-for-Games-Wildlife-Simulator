@@ -1,14 +1,21 @@
 #pragma once
 #include "State.h"
 
-class StateMachine {
-
-	void update(Agent* agent,StateMachine sm);
+class Agent;
+class State;
+class StateMachine
+{
+public: 
+	StateMachine();
+	~StateMachine();
+	
+	void update(Agent* agent,StateMachine* sm);
 	void requestStateChange(Agent* agent, State* newState);
 
-	void getCurrentState();
-	void getPrevState();
+	State* getCurrentState();
+	State* getPrevState();
 
+	private:
 	State* currentState;
 	State* prevState;
 	State* nextState;

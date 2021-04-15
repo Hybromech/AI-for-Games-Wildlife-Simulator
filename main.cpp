@@ -30,6 +30,11 @@
 #include "PathFollowBehaviour.h"
 #include <Path_Finding\MapReader.h>
 #include <Path_Finding\MakeNodeGrid.h>
+#include "StateMachine.h"
+#include "Wander_Circle.h"
+#include "Timer.cpp"
+
+
 
 Path dijkstrasSearch(Node* startNode, Node* endNode);
 
@@ -109,9 +114,12 @@ int main(int argc, char* argv[])
     //SeekForce* sf = new SeekForce(player);
     //SteeringBehaviour* steering = new SteeringBehaviour(sf);
     
+    SeekForce* sfp = new SeekForce()
+
     //Add bug agents
+    StateMachine* sm = new StateMachine();
     for (int i = 0; i < 1; i++) {//Add bugs
-        Agent* bug = new Agent(bugs);//Heap allocated.
+        Agent* bug = new Agent(bugs,sm);//Heap allocated.
         bug->initial_frame_y = i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
         //bug->AddBehaviour(new Chase(player, 8000));
         bug->AddBehaviour(path_behavior);//Add a path behaviour
@@ -119,7 +127,7 @@ int main(int argc, char* argv[])
         bug->max_speed = 100 + i * 20;
         
         
-        agents.push_back(bug);
+        agents.push_back(bug);//iterate through array and remove pointer.
     }
     //These bugs flee from the player.
     //FleeForce* ff = new FleeForce(player);
@@ -141,6 +149,10 @@ int main(int argc, char* argv[])
     //--------------------------------------------------------------------------------------
 
     // Main game loop
+    Circle debug_circle;
+    //debug_circle = debug_circle.makeCircle(agents[0]->GetPosition(), 50, 0, 360);
+    Timer timer(GetTime());
+    glm::vec2 target_point_pos = {0,0};
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
         // Update
@@ -172,20 +184,33 @@ int main(int argc, char* argv[])
         }
        
         for (auto a : agents){
-            a->Update(deltaTime);
+            a->Update(deltaTime,sm);
         }
+        //Setup debug circle
+        debug_circle.origin = agents[0]->GetPosition();
+        if (timer.update_timer(GetTime(),timer.endFrame) == true)//if the timer is fired //double currentTime, int startFrame, int endFrame
+        {
+            timer.startFrame = timer.reset_Timer(GetTime());
+            timer.endFrame = timer.set_endTime(timer.startFrame);
+            debug_circle = updateCircle(debug_circle,0, 360, 50,true);//update circle with randomised target point
+        }
+        debug_circle = updateCircle(debug_circle, 0, 360, 50, false);
+        std::cout << "start time" << timer.startFrame << std::endl;
+        
         // Draw 
         //----------------------------------------------------------------------------------
         BeginDrawing(); 
-
+        
         mp.Draw();
         DrawPath(path);
         //Draw hovered tile 
         DrawRectangleLines(p.x * tz, p.y * tz, tz, tz, Color{ 64,255,128,255 });
+        DrawCircle(debug_circle);
+        
 
         ClearBackground(RAYWHITE);
 
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+        //DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 
         for (auto a : agents) {
             a->Draw();
