@@ -1,24 +1,22 @@
-#include "State.h"
+#include "WanderState.h"
 #include <iostream>
 
-void State::update(Agent* agent, StateMachine* sm)
-{
-	//std::cout << "chasing player";
-	//chase the target bug
+void WanderState::update(Agent* agent, StateMachine* sm, float deltaTime)
+	{
+		std::cout << "Wandering";
+		agent->m_behaviours[0]->Update(agent, deltaTime);
+		//if (GameManager::DetectAgent(agent) == true)//Query detection
+		//{
+		//	std::cout << "Changing state to chase" << std::endl;
+		//	//sm->requestStateChange(agent,(State*)agent->chaseState);//Cast into State
+		//}
+	}
 
-	//If cannot see the target
-	//change state to search
+	void State::init(Agent* agent)
+	{
+	}
 
-	//If within range of target
-	//change state to attack
+	void State::exit(Agent* agent)
+	{
+	}
 
-	agent->AddForce(glm::vec2{ 50,0 });
-}
-
-void State::init(Agent* agent)
-{
-}
-
-void State::exit(Agent* agent)
-{
-}

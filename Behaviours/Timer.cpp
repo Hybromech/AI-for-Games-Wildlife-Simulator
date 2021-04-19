@@ -1,28 +1,29 @@
+#pragma once
 #include <iostream>
 struct Timer
 {
 	//Behaviours::PathFollowBehaviour::PathFollowBehaviour(float speed) : m_speed{ speed } {}
 	
 		double currentTime;
-		int endFrame;
-		int startFrame;
+		float endFrame;
+		float startFrame;
 		Timer(double ct) : currentTime{ ct }{
 			startFrame = currentTime;
-			endFrame = currentTime + 2;
+			endFrame = currentTime + 1.6f;
 		};
 		~Timer(){};
 	
-	int reset_Timer(double currentTime)
+	float reset_Timer(double currentTime)
 	{
-		int startFrame;
+		float startFrame;
 		startFrame = currentTime;  // Returns elapsed time in seconds since InitWindow()
 		return startFrame;
 	}
-	int set_endTime(int startFrame)
+	float set_endTime(float startFrame)
 	{
-		return endFrame = startFrame + 2;
+		return endFrame = startFrame + 1.6f;
 	}
-	bool update_timer(double currentTime, int endFrame)
+	bool update_timer(double currentTime, float endFrame)
 	{
 		std::cout << "current time" << currentTime << std::endl;
 		std::cout << "end time" << endFrame << std::endl;

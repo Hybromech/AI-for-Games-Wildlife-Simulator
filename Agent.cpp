@@ -2,7 +2,7 @@
 #include "Behaviour.h"
 #include <raylib.h>
 #include <string>
-#include "ChasePlayerState.h"
+
 
 int screenx = 200; //Dirty don't use
 int screeny = 200; //Dirty don't use
@@ -10,8 +10,8 @@ int screeny = 200; //Dirty don't use
 
 
 Agent::Agent(Texture t, StateMachine* s) : texture{ t }, sm(s)  {
-
-	sm->requestStateChange(this,new ChasePlayerState());
+	//wanderState = new WanderState();
+	//chaseState = new ChasePlayerState();
 };//Initialse colour with the item passed into the constructor.
 Agent::~Agent() {};
 
@@ -19,7 +19,7 @@ Agent::~Agent() {};
 void Agent::Update(float deltaTime, StateMachine* sm){
 	
 	m_force = {0,0};
-	sm->update(this,sm);
+	sm->update(this,sm,deltaTime);
 	//for (auto b : m_behaviours) { //Update all behaviours 
 	//	b->Update(this,deltaTime);
 	//}

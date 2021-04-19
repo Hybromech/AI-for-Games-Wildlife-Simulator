@@ -1,7 +1,7 @@
 #include "ChasePlayerState.h"
 #include <iostream>
 
-void ChasePlayerState::update(Agent* agent, StateMachine* sm)
+void ChasePlayerState::update(Agent* agent, StateMachine* sm, float deltaTime)
 {
 	//std::cout << "chasing player";
 	//chase the target bug
@@ -12,7 +12,7 @@ void ChasePlayerState::update(Agent* agent, StateMachine* sm)
 	//If within range of target
 	//change state to attack
 	
-	agent->AddForce(glm::vec2{ 50,0 });
+	agent->m_behaviours[1]->Update(agent, deltaTime);
 }
 
 void ChasePlayerState::init(Agent* agent)

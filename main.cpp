@@ -18,13 +18,14 @@
 *   Copyright (c) 2014 Ramon Santamaria (@raysan5)
 *
 ********************************************************************************************/
-
+#pragma once
 #include <raylib.h>
 #include <glm/glm.hpp>
 #include "Agent.h"
 #include "KeyboardBehaviour.h"
 #include "InstantKeyboard.h"
 #include "Chase.h"
+#include "Wander.h"
 #include "SteeringBehaviour.h"
 #include "SeekForce.h"
 #include "PathFollowBehaviour.h"
@@ -33,6 +34,7 @@
 #include "StateMachine.h"
 #include "Wander_Circle.h"
 #include "Timer.cpp"
+#include "GameManager.h"
 
 
 
@@ -72,7 +74,9 @@ int main(int argc, char* argv[])
     int screenWidth = 800;
     int screenHeight = 450;
     int tz = 32;
-
+    
+    //GameManager::DetectAgent();
+    
     screenx = screenWidth;
     screeny = screenHeight;
 
@@ -101,9 +105,12 @@ int main(int argc, char* argv[])
 
     auto path = dijkstrasSearch(&graph[start], &graph[end]);
 
-    Texture bugs = LoadTexture("textures/bugs.png");
+    Texture bug_texture = LoadTexture("textures/bugs.png");
 
     std::vector<Agent*> agents;//List of agents.
+    
+    //GameManager gameManager(agents);//Create game manager
+    
     auto path_behavior = new Behaviours::PathFollowBehaviour(20);
     path_behavior->SetPath(path);//update per second
     /*Agent* player = new Agent(bugs);
@@ -114,20 +121,40 @@ int main(int argc, char* argv[])
     //SeekForce* sf = new SeekForce(player);
     //SteeringBehaviour* steering = new SteeringBehaviour(sf);
     
-    SeekForce* sfp = new SeekForce()
+    glm::vec2 point{0,0};
+    SeekForce* sfp = new SeekForce(point);
+    Behaviours::SteeringBehaviour* steering = new Behaviours::SteeringBehaviour(sfp);
+
+    Circle debug_circle;
+    Timer timer(GetTime());
+    Wander* wander = nullptr;
+    Chase* chase = nullptr;
 
     //Add bug agents
     StateMachine* sm = new StateMachine();
-    for (int i = 0; i < 1; i++) {//Add bugs
-        Agent* bug = new Agent(bugs,sm);//Heap allocated.
-        bug->initial_frame_y = i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
+    //Create prey bug push onto array
+    Agent* prey_bug = new Agent(bug_texture, sm);
+    prey_bug->ID = 0;
+    prey_bug->initial_frame_y = 1;
+    prey_bug->max_speed = 5;
+    wander = new Wander(prey_bug, steering, debug_circle, timer);
+    chase = new Chase(prey_bug, 80);
+
+    prey_bug->AddBehaviour(wander);
+    prey_bug->SetPosition({ 400,225 });
+    agents.push_back(prey_bug);
+
+    for (int i = 1; i < 2; i++) {//Add bugs
+        Agent* predator_bug = new Agent(bug_texture,sm);//Heap allocated.
+        predator_bug->ID = i;
+        predator_bug->initial_frame_y = 6;//i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
         //bug->AddBehaviour(new Chase(player, 8000));
-        bug->AddBehaviour(path_behavior);//Add a path behaviour
-        bug->SetPosition({ 100 + 20*i, 100 });
-        bug->max_speed = 100 + i * 20;
-        
-        
-        agents.push_back(bug);//iterate through array and remove pointer.
+        wander = new Wander(predator_bug, steering, debug_circle, timer);
+        predator_bug->AddBehaviour(wander);//Add a path behaviour
+        predator_bug->AddBehaviour(chase);
+        predator_bug->SetPosition({ 100 + 20*i, 100 });
+        predator_bug->max_speed = 100 + i * 20; 
+        agents.push_back(predator_bug);//iterate through array and remove pointer.
     }
     //These bugs flee from the player.
     //FleeForce* ff = new FleeForce(player);
@@ -149,9 +176,6 @@ int main(int argc, char* argv[])
     //--------------------------------------------------------------------------------------
 
     // Main game loop
-    Circle debug_circle;
-    //debug_circle = debug_circle.makeCircle(agents[0]->GetPosition(), 50, 0, 360);
-    Timer timer(GetTime());
     glm::vec2 target_point_pos = {0,0};
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
@@ -183,30 +207,22 @@ int main(int argc, char* argv[])
             path_behavior->SetPath(path);//update per second
         }
        
-        for (auto a : agents){
-            a->Update(deltaTime,sm);
-        }
+        //Update all agents
+       
         //Setup debug circle
-        debug_circle.origin = agents[0]->GetPosition();
-        if (timer.update_timer(GetTime(),timer.endFrame) == true)//if the timer is fired //double currentTime, int startFrame, int endFrame
-        {
-            timer.startFrame = timer.reset_Timer(GetTime());
-            timer.endFrame = timer.set_endTime(timer.startFrame);
-            debug_circle = updateCircle(debug_circle,0, 360, 50,true);//update circle with randomised target point
-        }
-        debug_circle = updateCircle(debug_circle, 0, 360, 50, false);
-        std::cout << "start time" << timer.startFrame << std::endl;
         
         // Draw 
         //----------------------------------------------------------------------------------
         BeginDrawing(); 
         
-        mp.Draw();
-        DrawPath(path);
+        mp.Draw();//Draw the map
+        DrawPath(path);//Draw the path
         //Draw hovered tile 
         DrawRectangleLines(p.x * tz, p.y * tz, tz, tz, Color{ 64,255,128,255 });
-        DrawCircle(debug_circle);
-        
+        //wander->DrawDebugCircle();//!!
+        for (auto a : agents) {
+            a->Update(deltaTime, sm);
+        }
 
         ClearBackground(RAYWHITE);
 
@@ -224,7 +240,7 @@ int main(int argc, char* argv[])
     CloseWindow();        // Close window and OpenGL context
     //--------------------------------------------------------------------------------------
 
-    UnloadTexture(bugs);
+    UnloadTexture(bug_texture);
     for (auto a : agents){
         delete a;
     }

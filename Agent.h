@@ -5,6 +5,8 @@
 #include <glm/glm.hpp>
 #include <raylib.h>
 #include "StateMachine.h"
+#include "WanderState.h"
+#include "ChasePlayerState.h"
 
 extern int screenx; //Dirty don't use
 extern int screeny; //Dirty don't use
@@ -22,7 +24,7 @@ class Agent
 	virtual void Draw();
 
 	void AddBehaviour(Behaviour*);
-	
+	int ID;
 
 	//Movement functions
 	void SetPosition(glm::vec2 position);
@@ -31,6 +33,9 @@ class Agent
 	const glm::vec2& GetVelocity() const;
 	void AddForce(glm::vec2 force); //Mostly used by Behaviours
 
+	/*WanderState* wanderState;
+	ChasePlayerState* chaseState;*/
+	
 	float max_speed = 200;
 	float max_force = 0;
 
@@ -40,8 +45,9 @@ class Agent
 	float frames_ps = 15;
 	int steps = 8;
 
-private: 
 	std::vector<std::shared_ptr<Behaviour>> m_behaviours; //Must store base class as a pointer to maintain data.
+private: 
+	
 	glm::vec2 m_position = { 0,0 };
 	glm::vec2 m_velocity = { 0,0 }; 
 	glm::vec2 m_force = { 0,0 };

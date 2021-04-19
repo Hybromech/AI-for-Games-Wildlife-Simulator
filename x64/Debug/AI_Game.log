@@ -1,4 +1,127 @@
-﻿  main.cpp
+﻿  Agent.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.cpp(64,23): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.cpp(64,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.cpp(64,42): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.cpp(64,42): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  Chase.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+  InstantKeyboard.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+  KeyboardBehaviour.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+  PathFollowBehaviour.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+  Wander.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(11,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(12,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(19,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(35,43): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(35,38): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(46,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(47,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(57,48): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(57,31): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(58,55): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander.cpp(58,32): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  ChasePlayerState.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(6,1): error C2504: 'State': base class undefined
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.cpp(15,24): error C2027: use of undefined type 'Behaviour'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(14): message : see declaration of 'Behaviour'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.cpp(15,26): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(48): message : see declaration of 'std::shared_ptr<Behaviour>'
+  GameManager.cpp
+  Idle.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+  main.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(13,27): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(14,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\State.h(15,25): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(11,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(12,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(19,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,23): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
 D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,37): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
@@ -7,99 +130,104 @@ D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_
 D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,48): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,57): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
 D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,57): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(19,35): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(19,30): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(19,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(41,40): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(48,86): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(41,28): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(48,68): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(42,47): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(48,50): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Wander_Circle.h(42,29): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(48,32): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(10,17): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(11,27): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(18,16): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(46,86): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(91,14): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(91,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(91,17): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(91,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,13): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(92,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,13): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,12): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(156,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(188,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(189,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(190,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(203,29): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(46,68): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(204,29): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(46,50): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(205,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
           with
           [
               T=float
           ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(46,32): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(87,14): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(87,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(87,17): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(87,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,13): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(88,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,13): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(89,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,12): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(90,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(125,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(162,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(163,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(164,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(177,29): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(178,29): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(179,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(205,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(205,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  AI_Game.vcxproj -> D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\x64\Debug\AI_Game.exe
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(221,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(221,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  StateMachine.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(6,1): error C2504: 'State': base class undefined
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,19): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,17): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,17): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(7,7): error C3668: 'WanderState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(8,7): error C3668: 'WanderState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(9,7): error C3668: 'WanderState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(5,1): error C2504: 'State': base class undefined
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,20): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,18): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,18): error C2061: syntax error: identifier 'Agent'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(5,2): error C2511: 'void WanderState::update(Agent *,StateMachine *,float)': overloaded member function not found in 'WanderState'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.h(5): message : see declaration of 'WanderState'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,25): error C2027: use of undefined type 'Behaviour'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(14): message : see declaration of 'Behaviour'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,27): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(48): message : see declaration of 'std::shared_ptr<Behaviour>'
+  WanderState.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(5,1): error C2504: 'State': base class undefined
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(6,8): error C3668: 'ChasePlayerState::update': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(7,8): error C3668: 'ChasePlayerState::init': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(8,8): error C3668: 'ChasePlayerState::exit': method with override specifier 'override' did not override any base class methods
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,25): error C2027: use of undefined type 'Behaviour'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(14): message : see declaration of 'Behaviour'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,27): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(48): message : see declaration of 'std::shared_ptr<Behaviour>'
+  Wander_Circle.cpp
+  Generating Code...

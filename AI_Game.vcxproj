@@ -152,13 +152,17 @@
     <ClCompile Include="Behaviours\KeyboardBehaviour.cpp" />
     <ClCompile Include="Behaviours\PathFollowBehaviour.cpp" />
     <ClCompile Include="Behaviours\Timer.cpp" />
+    <ClCompile Include="Behaviours\Wander.cpp" />
     <ClCompile Include="ChasePlayerState.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Idle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Path_Finding\DijkstrasSearch.cpp" />
     <ClCompile Include="Path_Finding\MakeNodeGrid.cpp" />
     <ClCompile Include="Path_Finding\MapReader.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="WanderState.cpp" />
+    <ClCompile Include="Wander_Circle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Agent.h" />
@@ -170,13 +174,18 @@
     <ClInclude Include="Behaviours\SeekForce.h" />
     <ClInclude Include="Behaviours\SteeringBehaviour.h" />
     <ClInclude Include="Behaviours\SteeringForce.h" />
+    <ClInclude Include="Behaviours\Wander.h" />
     <ClInclude Include="Behaviours\Wander_Circle.h" />
     <ClInclude Include="ChasePlayerState.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="Idle.h" />
     <ClInclude Include="Path_Finding\Graph.h" />
     <ClInclude Include="Path_Finding\MakeNodeGrid.h" />
     <ClInclude Include="Path_Finding\MapReader.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="Wander.h" />
+    <ClInclude Include="WanderState.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="robot_sprite1.png" />

@@ -3,7 +3,7 @@
 
 class ChasePlayerState : public State
 {
-	 void update(Agent* agent, StateMachine* sm)override;
+	 void update(Agent* agent, StateMachine* sm, float deltaTime)override;
 	 void init(Agent* agent)override;
 	 void exit(Agent* agent)override;
 };

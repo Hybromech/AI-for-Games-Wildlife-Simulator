@@ -9,7 +9,7 @@ public:
 	StateMachine();
 	~StateMachine();
 	
-	void update(Agent* agent,StateMachine* sm);
+	void update(Agent* agent,StateMachine* sm, float deltaTime);
 	void requestStateChange(Agent* agent, State* newState);
 
 	State* getCurrentState();
