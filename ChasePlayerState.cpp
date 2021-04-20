@@ -1,6 +1,7 @@
 #include "ChasePlayerState.h"
 #include <iostream>
 
+
 void ChasePlayerState::update(Agent* agent, StateMachine* sm, float deltaTime)
 {
 	//std::cout << "chasing player";

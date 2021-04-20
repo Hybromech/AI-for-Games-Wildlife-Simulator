@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Behaviour.h"
-#include "Graph.h"
-#include <vector>
+#include<glm/glm.hpp>
+#include<Graph.h>
+#include"Behaviour.h"
 
 
 namespace Behaviours {

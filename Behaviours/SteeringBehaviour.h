@@ -1,7 +1,5 @@
 #pragma once
-#include "Behaviour.h"
 #include "SteeringForce.h"
-#include "Agent.h"
 
 namespace Behaviours
 {

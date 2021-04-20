@@ -1,5 +1,6 @@
 #include "WanderState.h"
 #include <iostream>
+#include "Agent.h"
 
 void WanderState::update(Agent* agent, StateMachine* sm, float deltaTime)
 	{

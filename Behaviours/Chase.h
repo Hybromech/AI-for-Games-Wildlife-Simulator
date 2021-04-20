@@ -1,6 +1,7 @@
 #pragma once
-
 #include "Behaviour.h"
+
+class Behaviour;
 class Chase : public Behaviour
 {
 private:

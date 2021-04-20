@@ -1,6 +1,4 @@
-#pragma once
-#include "State.h"
-#include <iostream>
+#include "state.h"
 //class state;
 class WanderState : public State
 {

@@ -1,8 +1,6 @@
 #pragma once
 #include "State.h"
 
-class Agent;
-class State;
 class StateMachine
 {
 public: 

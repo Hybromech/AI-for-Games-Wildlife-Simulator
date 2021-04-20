@@ -1,11 +1,7 @@
 #pragma once
 #include "Agent.h"
-#include "StateMachine.h"
-//#include "GameManager.h"
-//#include "Behaviour.h"
 
-class Agent;
-class StateMachine;
+
 //Abstract base class
 class State
 {

@@ -1,13 +1,9 @@
 #include "Agent.h"
-#include "Behaviour.h"
-#include <raylib.h>
-#include <string>
+#include "StateMachine.h"
 
 
 int screenx = 200; //Dirty don't use
 int screeny = 200; //Dirty don't use
-
-
 
 Agent::Agent(Texture t, StateMachine* s) : texture{ t }, sm(s)  {
 	//wanderState = new WanderState();

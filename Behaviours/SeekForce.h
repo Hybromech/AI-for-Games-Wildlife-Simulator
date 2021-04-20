@@ -1,6 +1,5 @@
 #pragma once
-#include "SteeringForce.h"
-#include "Agent.h"
+
 
 class SeekForce : public SteeringForce
 {

@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Behaviour.h"
 
 class InstantKeyboard : public Behaviour

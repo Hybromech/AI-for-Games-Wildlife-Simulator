@@ -1,5 +1,7 @@
 #include "Chase.h"
-#include "Agent.h"
+
+
+class Agent;
 
 Chase::Chase(const Agent* target, float speed)
 	: Behaviour()

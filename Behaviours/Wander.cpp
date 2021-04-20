@@ -1,5 +1,4 @@
 #include "Wander.h"
-#include "Agent.h"
 
 
 Wander::Wander(const Agent* a, Behaviours::SteeringBehaviour* sb, Circle c,Timer t)
