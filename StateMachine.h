@@ -8,7 +8,8 @@ public:
 	~StateMachine();
 	
 	void update(Agent* agent,StateMachine* sm, float deltaTime);
-	void requestStateChange(Agent* agent, State* newState);
+	void requestStateChange(State* newState);
+	void init_currentState(State* initState);
 
 	State* getCurrentState();
 	State* getPrevState();

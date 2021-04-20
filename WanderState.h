@@ -1,4 +1,7 @@
 #include "state.h"
+#include "Behaviour.h"
+#include <iostream>
+
 //class state;
 class WanderState : public State
 {

@@ -35,6 +35,8 @@
 #include "Wander_Circle.h"
 #include "Timer.cpp"
 #include "GameManager.h"
+#include "WanderState.h"
+#include "ChasePlayerState.h"
 
 
 
@@ -131,11 +133,16 @@ int main(int argc, char* argv[])
     Chase* chase = nullptr;
 
     //Add bug agents
+    //Create new states
+    WanderState* wanderState = new WanderState();
+    ChasePlayerState* chaseState = new ChasePlayerState();
     StateMachine* sm = new StateMachine();
+    
+    sm->init_currentState(wanderState);
     //Create prey bug push onto array
     Agent* prey_bug = new Agent(bug_texture, sm);
     prey_bug->ID = 0;
-    prey_bug->initial_frame_y = 1;
+    prey_bug->initial_frame_y = 2;
     prey_bug->max_speed = 5;
     wander = new Wander(prey_bug, steering, debug_circle, timer);
     chase = new Chase(prey_bug, 80);

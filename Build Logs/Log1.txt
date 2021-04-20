@@ -1,0 +1,19 @@
+1>------ Build started: Project: AI_Game, Configuration: Debug x64 ------
+1>ChasePlayerState.cpp
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.cpp(16,24): error C2027: use of undefined type 'Behaviour'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(12): message : see declaration of 'Behaviour'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.cpp(16,26): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(46): message : see declaration of 'std::shared_ptr<Behaviour>'
+1>StateMachine.cpp
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(8,25): error C2027: use of undefined type 'Behaviour'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(12): message : see declaration of 'Behaviour'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(8,27): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(46): message : see declaration of 'std::shared_ptr<Behaviour>'
+1>WanderState.cpp
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(8,25): error C2027: use of undefined type 'Behaviour'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(12): message : see declaration of 'Behaviour'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(8,27): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
+1>D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(46): message : see declaration of 'std::shared_ptr<Behaviour>'
+1>Generating Code...
+1>Done building project "AI_Game.vcxproj" -- FAILED.
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========

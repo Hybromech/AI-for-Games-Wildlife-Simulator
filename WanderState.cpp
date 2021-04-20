@@ -1,6 +1,5 @@
 #include "WanderState.h"
-#include <iostream>
-#include "Agent.h"
+
 
 void WanderState::update(Agent* agent, StateMachine* sm, float deltaTime)
 	{
@@ -13,11 +12,11 @@ void WanderState::update(Agent* agent, StateMachine* sm, float deltaTime)
 		//}
 	}
 
-	void State::init(Agent* agent)
+	void WanderState::init(Agent* agent)
 	{
 	}
 
-	void State::exit(Agent* agent)
+	void WanderState::exit(Agent* agent)
 	{
 	}
 

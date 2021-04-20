@@ -1,6 +1,5 @@
 #include "StateMachine.h"
-#include "ChasePlayerState.h"
-#include "WanderState.cpp"
+
 
 StateMachine::StateMachine()
 {
@@ -10,8 +9,6 @@ StateMachine::~StateMachine() {} //con
 
 void StateMachine::update(Agent* agent, StateMachine* sm, float deltaTime)
 {
-	StateMachine::currentState->update(agent,sm, deltaTime);
-
 	if (nextState != nullptr)//if there is a next state
 	{
 		currentState->exit(agent);																																										
@@ -20,9 +17,10 @@ void StateMachine::update(Agent* agent, StateMachine* sm, float deltaTime)
 		currentState = nextState;
 		nextState = nullptr;
 	}
+	StateMachine::currentState->update(agent, sm, deltaTime);
 }
 
-void StateMachine::requestStateChange(Agent*,State* newState)
+void StateMachine::requestStateChange(State* newState)
 {
 	nextState = newState;
 }
@@ -34,4 +32,9 @@ State* StateMachine::getCurrentState()
 State* StateMachine::getPrevState()
 {
 	return  StateMachine::prevState;
+}
+
+void StateMachine::init_currentState(State* initState)
+{
+	currentState = initState;
 }

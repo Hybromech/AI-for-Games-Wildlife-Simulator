@@ -4,7 +4,7 @@
 #include <memory>
 #include <glm/glm.hpp>
 #include <raylib.h>
-//#include "StateMachine.h"
+
 
 extern int screenx; //Dirty don't use
 extern int screeny; //Dirty don't use

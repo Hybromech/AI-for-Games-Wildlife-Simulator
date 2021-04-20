@@ -1,17 +1,82 @@
-﻿  ChasePlayerState.cpp
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.cpp(17,24): error C2027: use of undefined type 'Behaviour'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(12): message : see declaration of 'Behaviour'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.cpp(17,26): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(46): message : see declaration of 'std::shared_ptr<Behaviour>'
-  Idle.cpp
-  StateMachine.cpp
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,25): error C2027: use of undefined type 'Behaviour'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(12): message : see declaration of 'Behaviour'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,27): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(46): message : see declaration of 'std::shared_ptr<Behaviour>'
-  WanderState.cpp
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,25): error C2027: use of undefined type 'Behaviour'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(12): message : see declaration of 'Behaviour'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\WanderState.cpp(7,27): error C2039: 'Update': is not a member of 'std::shared_ptr<Behaviour>'
-D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(46): message : see declaration of 'std::shared_ptr<Behaviour>'
-  Generating Code...
+﻿  main.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(11,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(12,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Timer.cpp(19,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,23): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,23): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,37): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,37): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,48): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,48): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,57): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Path_Finding\MapReader.h(22,57): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(50,86): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(50,68): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(50,50): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(50,32): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,14): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,14): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,17): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(93,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,13): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(94,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,13): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(95,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,12): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,12): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,20): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,28): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(96,28): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(163,39): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(195,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(196,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(197,20): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(210,29): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(211,29): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(212,24): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(228,42): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\main.cpp(228,32): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  AI_Game.vcxproj -> D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\x64\Debug\AI_Game.exe
