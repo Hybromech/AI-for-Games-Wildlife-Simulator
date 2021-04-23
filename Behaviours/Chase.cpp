@@ -1,5 +1,5 @@
 #include "Chase.h"
-
+#include "agent.h"
 
 class Agent;
 

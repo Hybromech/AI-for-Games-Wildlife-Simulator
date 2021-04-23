@@ -17,7 +17,7 @@ bool Wander::Update(Agent* agent, float deltaTime) {
 		timer.startFrame = timer.reset_Timer(GetTime());
 		std::cout << "start time" << timer.startFrame << std::endl;
 		timer.endFrame = timer.set_endTime(timer.startFrame);
-		circle = updateCircle(circle, 5, 60, 200, true);//update circle with randomised target point
+		circle = updateCircle(circle,-60, 60, 60, true);//update circle with randomised target point
 	}
 
 	
@@ -30,15 +30,23 @@ bool Wander::Update(Agent* agent, float deltaTime) {
 Circle Wander::updateCircle(Circle c, float min, float max, float radius, bool gen_rand)
 {
 	if (gen_rand)
-		//c.angle = 95;
-		c.angle = c.angle + GetRandomValue(min, max);
+	{
+		auto getRandomV = GetRandomValue(min, max);
+		std::cout << "__getRandomV X " << getRandomV;
+		c.angle = c.angle + getRandomV;
+	}
 		
+		std::cout << c.angle << std::endl;
 		std::cout << "__Origin X " << c.origin.x;
 		std::cout << "__Origin Y " << c.origin.y;
 		std::cout << "__Angle " << c.angle;
 		
 		if (c.angle > 360)
-			c.angle = 0;
+			c.angle -= 360;
+		
+		if (c.angle < 0)
+			c.angle += 360;
+
 		//c.angle = GetRandomValue(min, max);//Get a random angle from 0 to 360
 		
 		//calculate x and y position of point based on that angle

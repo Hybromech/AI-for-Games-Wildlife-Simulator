@@ -1,5 +1,5 @@
 #include "ChasePlayerState.h"
-
+#include "Agent.h"
 
 
 void ChasePlayerState::update(Agent* agent, StateMachine* sm, float deltaTime)
@@ -14,6 +14,7 @@ void ChasePlayerState::update(Agent* agent, StateMachine* sm, float deltaTime)
 	//change state to attack
 	
 	agent->m_behaviours[1]->Update(agent, deltaTime);
+	std::cout << "Chasing" << std::endl;
 }
 
 void ChasePlayerState::init(Agent* agent)

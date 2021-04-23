@@ -39,7 +39,6 @@
 #include "ChasePlayerState.h"
 
 
-
 Path dijkstrasSearch(Node* startNode, Node* endNode);
 
 void DrawPath(const Path& path) {
@@ -73,8 +72,8 @@ int main(int argc, char* argv[])
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    int screenWidth = 800;
-    int screenHeight = 450;
+    int screenWidth = 1920;
+    int screenHeight = 1080;
     int tz = 32;
     
     //GameManager::DetectAgent();
@@ -99,6 +98,7 @@ int main(int argc, char* argv[])
     mp.rectanglemap = rectarray; //DJ Bug 4 need to set the rectarry into the mp.rectanglemap 
     float terrain_difficulty[] = { 1,2,4,impassable };
     auto graph = BuildmodeGraph(mp, tz, terrain_difficulty);
+    std::cout << "graph size" << graph.size();
 
     ResetGraph(&graph[0], &graph[graph.size() - 1]);
 
@@ -106,14 +106,14 @@ int main(int argc, char* argv[])
     int end = 46;
 
     auto path = dijkstrasSearch(&graph[start], &graph[end]);
+    std::cout << "path size after search" << path.size();
 
     Texture bug_texture = LoadTexture("textures/bugs.png");
 
     std::vector<Agent*> agents;//List of agents.
     
-    //GameManager gameManager(agents);//Create game manager
-    
-    auto path_behavior = new Behaviours::PathFollowBehaviour(20);
+
+    auto path_behavior = new Behaviours::PathFollowBehaviour(150);//param is speed
     path_behavior->SetPath(path);//update per second
     /*Agent* player = new Agent(bugs);
     player->AddBehaviour(new InstantKeyboard(20000));
@@ -122,7 +122,8 @@ int main(int argc, char* argv[])
     
     //SeekForce* sf = new SeekForce(player);
     //SteeringBehaviour* steering = new SteeringBehaviour(sf);
-    
+   
+
     glm::vec2 point{0,0};
     SeekForce* sfp = new SeekForce(point);
     Behaviours::SteeringBehaviour* steering = new Behaviours::SteeringBehaviour(sfp);
@@ -131,57 +132,50 @@ int main(int argc, char* argv[])
     Timer timer(GetTime());
     Wander* wander = nullptr;
     Chase* chase = nullptr;
+    Chase* chase2 = nullptr;
 
     //Add bug agents
     //Create new states
     WanderState* wanderState = new WanderState();
     ChasePlayerState* chaseState = new ChasePlayerState();
     StateMachine* sm = new StateMachine();
-    
+    GameManager* gameManager = new GameManager(agents);
+    Agent* predator_bug = nullptr;
+    Agent* prey_bug = nullptr;
+
     sm->init_currentState(wanderState);
-    //Create prey bug push onto array
-    Agent* prey_bug = new Agent(bug_texture, sm);
-    prey_bug->ID = 0;
-    prey_bug->initial_frame_y = 2;
-    prey_bug->max_speed = 5;
-    wander = new Wander(prey_bug, steering, debug_circle, timer);
-    chase = new Chase(prey_bug, 80);
 
-    prey_bug->AddBehaviour(wander);
-    prey_bug->SetPosition({ 400,225 });
-    agents.push_back(prey_bug);
-
+    //Add Predior Bugs
+    chase = new Chase(prey_bug, 120);//Target,Speed
     for (int i = 1; i < 2; i++) {//Add bugs
-        Agent* predator_bug = new Agent(bug_texture,sm);//Heap allocated.
+        sm->requestStateChange(chaseState);
+        predator_bug = new Agent(bug_texture,sm, gameManager);//Heap allocated.
         predator_bug->ID = i;
         predator_bug->initial_frame_y = 6;//i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
         //bug->AddBehaviour(new Chase(player, 8000));
         wander = new Wander(predator_bug, steering, debug_circle, timer);
         predator_bug->AddBehaviour(wander);//Add a path behaviour
         predator_bug->AddBehaviour(chase);
-        predator_bug->SetPosition({ 100 + 20*i, 100 });
+        predator_bug->AddBehaviour(path_behavior);
+        predator_bug->SetPosition({ 96, 992 });//({ 100 + 20*i, 100 });
         predator_bug->max_speed = 100 + i * 20; 
         agents.push_back(predator_bug);//iterate through array and remove pointer.
     }
-    //These bugs flee from the player.
-    //FleeForce* ff = new FleeForce(player);
-    //SteeringBehaviour* fleesteering = new SteeringBehaviour(ff);
-    //for (int i = 0; i < 10; i++) {
-    //    Agent* bug = new Agent(bugs);//Heap allocated.
-    //    bug->initial_frame_y = i % 7 * 2 + 1; //Pick any bug except yellow. could also read from file.
-    //    //bug->AddBehaviour(new Chase(player, 8000));
-    //    bug->AddBehaviour(fleesteering);//Add a steering behaviour
-    //    bug->SetPosition({ 100 + 20 * i, 100 });
-    //    bug->max_speed = 20 + i * 5;
-
-
-    //    agents.push_back(bug);
-    //}
+    //Add Prey Bugs white bug
+    prey_bug = new Agent(bug_texture, sm, gameManager);
+    prey_bug->ID = 0;
+    prey_bug->initial_frame_y = 2;
+    prey_bug->max_speed = 50;
     
+    wander = new Wander(prey_bug, steering, debug_circle, timer);
+    chase2 = new Chase(predator_bug, 100);//Target,Speed
+
+    prey_bug->AddBehaviour(wander);
+    prey_bug->AddBehaviour(chase2);
+    prey_bug->SetPosition({ 928,512 });
+    agents.push_back(prey_bug);
     float deltaTime = 0;
-
     //--------------------------------------------------------------------------------------
-
     // Main game loop
     glm::vec2 target_point_pos = {0,0};
     while (!WindowShouldClose())    // Detect window close button or ESC key
@@ -191,14 +185,17 @@ int main(int argc, char* argv[])
         // TODO: Update your variables here
         //----------------------------------------------------------------------------------
         deltaTime = GetFrameTime();
-        auto p = GetMousePosition();
-        p.x = (int)(p.x / tz);
-        p.y = (int)(p.y / tz);
-        int tileid = p.x + p.y * mp.x;
+        auto mousePos = GetMousePosition();
+        mousePos.x = (int)(mousePos.x / tz);
+        mousePos.y = (int)(mousePos.y / tz);
+        int tileid = mousePos.x + mousePos.y * mp.x;
+        std::cout << "Mouse X = " << mousePos.x << std::endl;
+        std::cout << "Mouse Y = " << mousePos.y << std::endl;
 
         bool moused = false;
         if (IsMouseButtonPressed(0)) {
             start = tileid;
+            
         }
         if (IsMouseButtonPressed(1)) {
             end = tileid;
@@ -206,27 +203,24 @@ int main(int argc, char* argv[])
         }
 
         if (moused){
-            auto p = agents[0]->GetPosition();
-            p.x = (int)(p.x / tz);//convert into tile position.
-            p.y = (int)(p.y / tz);
-            int tileid = p.x + p.y * mp.x;//tileID is the node
+            auto bugPos = agents[1]->GetPosition();//preditor bug
+            bugPos.x = (int)(bugPos.x / tz);//convert into tile position.
+            bugPos.y = (int)(bugPos.y / tz);
+            int tileid = bugPos.x + bugPos.y * mp.x;//tileID is the node
             path = dijkstrasSearch(&graph[tileid], &graph[end]);
             path_behavior->SetPath(path);//update per second
         }
        
         //Update all agents
-       
-        //Setup debug circle
         
-        // Draw 
+        //Draw 
         //----------------------------------------------------------------------------------
         BeginDrawing(); 
         
         mp.Draw();//Draw the map
         DrawPath(path);//Draw the path
         //Draw hovered tile 
-        DrawRectangleLines(p.x * tz, p.y * tz, tz, tz, Color{ 64,255,128,255 });
-        //wander->DrawDebugCircle();//!!
+        DrawRectangleLines(mousePos.x * tz, mousePos.y * tz, tz, tz, Color{ 64,255,128,255 });
         for (auto a : agents) {
             a->Update(deltaTime, sm);
         }

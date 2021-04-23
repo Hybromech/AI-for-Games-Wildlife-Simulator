@@ -4,7 +4,9 @@
 #include <memory>
 #include <glm/glm.hpp>
 #include <raylib.h>
-
+#include <ChasePlayerState.h>
+#include<WanderState.h>
+class GameManager;
 
 extern int screenx; //Dirty don't use
 extern int screeny; //Dirty don't use
@@ -15,7 +17,7 @@ class StateMachine;
 class Agent
 {
 	public:
-	Agent(Texture t, StateMachine* sm);
+	Agent(Texture t, StateMachine* sm, GameManager* gm);
 	~Agent();
 
 	virtual void Update(float deltaTime, StateMachine* sm);
@@ -31,11 +33,12 @@ class Agent
 	const glm::vec2& GetVelocity() const;
 	void AddForce(glm::vec2 force); //Mostly used by Behaviours
 
-	/*WanderState* wanderState;
-	ChasePlayerState* chaseState;*/
+	WanderState* wanderState;
+	ChasePlayerState* chaseState;
+	GameManager* gameManager;
 	
-	float max_speed = 200;
-	float max_force = 0;
+	float max_speed = 10000000;
+	float max_force = 500;
 
 	//Animation
 	int initial_frame_x = 4;

@@ -1,11 +1,11 @@
 #include "Agent.h"
 #include "StateMachine.h"
-
+#include "GameManager.h"
 
 int screenx = 200; //Dirty don't use
 int screeny = 200; //Dirty don't use
 
-Agent::Agent(Texture t, StateMachine* s) : texture{ t }, sm(s)  {
+Agent::Agent(Texture t, StateMachine* s, GameManager* gm) : texture{ t }, sm(s), gameManager(gm){
 	//wanderState = new WanderState();
 	//chaseState = new ChasePlayerState();
 };//Initialse colour with the item passed into the constructor.
@@ -15,6 +15,8 @@ Agent::~Agent() {};
 void Agent::Update(float deltaTime, StateMachine* sm){
 	
 	m_force = {0,0};
+	chaseState = new ChasePlayerState();
+	wanderState = new WanderState();
 	sm->update(this,sm,deltaTime);
 	//for (auto b : m_behaviours) { //Update all behaviours 
 	//	b->Update(this,deltaTime);

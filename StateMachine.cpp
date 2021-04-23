@@ -11,7 +11,7 @@ void StateMachine::update(Agent* agent, StateMachine* sm, float deltaTime)
 {
 	if (nextState != nullptr)//if there is a next state
 	{
-		currentState->exit(agent);																																										
+		currentState->exit(agent);																																									
 		nextState->init(agent);
 		prevState = currentState;
 		currentState = nextState;

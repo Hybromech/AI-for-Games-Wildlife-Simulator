@@ -1,6 +1,7 @@
-#include "state.h"
-#include "Behaviour.h"
-#include <iostream>
+#pragma once
+#include "State.h"
+class Behaviour;
+class Agent;
 
 //class state;
 class WanderState : public State

@@ -1,6 +1,6 @@
 #pragma once
-#include "Agent.h"
-
+class Agent;
+class StateMachine;
 
 //Abstract base class
 class State

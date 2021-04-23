@@ -1,5 +1,6 @@
 #include "PathFollowBehaviour.h"
-
+#include "iostream"
+#include "Agent.h"
 Behaviours::PathFollowBehaviour::PathFollowBehaviour(float speed) : m_speed{ speed } {}
 
 void Behaviours::PathFollowBehaviour::SetPath(const Path& path) { //create new path
@@ -14,6 +15,7 @@ void Behaviours::PathFollowBehaviour::SetPath(const Path& path) { //create new p
 
 bool Behaviours::PathFollowBehaviour::Update(Agent* agent, float deltatime) {
 	//If at end stop.
+	std::cout << "current_path.size" << current_path.size();
 	if (next_node >= current_path.size()) {
 		glm::vec2 vec{ 0 };
 		agent->SetVelocity(vec);
