@@ -15,6 +15,8 @@ void ChasePlayerState::update(Agent* agent, StateMachine* sm, float deltaTime)
 	
 	agent->m_behaviours[1]->Update(agent, deltaTime);
 	std::cout << "Chasing" << std::endl;
+	std::cout << "Current_state" << sm->getCurrentState() << std::endl;
+	std::cout << "Agent ID is" << agent->ID << std::endl;
 }
 
 void ChasePlayerState::init(Agent* agent)

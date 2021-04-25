@@ -14,7 +14,7 @@ Chase::~Chase() {}
 bool Chase::Update(Agent* agent, float deltaTime){
 //calculate the direction to the target.
 	auto V = glm::normalize(m_target->GetPosition() - agent->GetPosition());
-    auto Force = V * m_speed * deltaTime;
+    auto Force = V * m_speed; //Bug should not multiply by delta time.
 	agent->AddForce(Force);
 	
 	return 1;

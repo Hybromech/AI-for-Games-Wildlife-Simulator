@@ -1,15 +1,15 @@
 #include "Wander.h"
 
 
-Wander::Wander(const Agent* a, Behaviours::SteeringBehaviour* sb, Circle c,Timer t)
-	: Behaviour(), agent{ a }, steering{ sb }, circle{ c }, timer{ t }
+Wander::Wander(Behaviours::SteeringBehaviour* sb, Circle c,Timer t)
+	: Behaviour(),steering{ sb }, circle{ c }, timer{ t }
 {}
 
 Wander::~Wander() {}
 
 bool Wander::Update(Agent* agent, float deltaTime) {
 	
-	circle = updateCircle(circle,0,360,50,false);
+	circle = updateCircle(circle,0,360,30,false);
 	
 	circle.origin = agent->GetPosition();
 	if (timer.update_timer(GetTime(), timer.endFrame) == true)//if the timer is fired //double currentTime, int startFrame, int endFrame
@@ -17,10 +17,9 @@ bool Wander::Update(Agent* agent, float deltaTime) {
 		timer.startFrame = timer.reset_Timer(GetTime());
 		std::cout << "start time" << timer.startFrame << std::endl;
 		timer.endFrame = timer.set_endTime(timer.startFrame);
-		circle = updateCircle(circle,-60, 60, 60, true);//update circle with randomised target point
+		circle = updateCircle(circle,-90, 90, 30, true);//update circle with randomised target point
 	}
 
-	
 	steering->force->Set_point(circle.target_point);
 	steering->Update(agent, deltaTime);
 	DrawDebugCircle();

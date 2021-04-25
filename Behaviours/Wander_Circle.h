@@ -3,7 +3,7 @@
 struct Circle
 {
 	glm::vec2 origin;
-	float radius = 50;// = hypotenuse
+	float radius = 30;// = hypotenuse
 	glm::vec2 target_point;
 	float outer_x;
 	float outer_y;

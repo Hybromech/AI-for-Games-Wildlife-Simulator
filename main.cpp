@@ -131,6 +131,7 @@ int main(int argc, char* argv[])
     Circle debug_circle;
     Timer timer(GetTime());
     Wander* wander = nullptr;
+    Wander* wander2 = nullptr;
     Chase* chase = nullptr;
     Chase* chase2 = nullptr;
 
@@ -138,23 +139,33 @@ int main(int argc, char* argv[])
     //Create new states
     WanderState* wanderState = new WanderState();
     ChasePlayerState* chaseState = new ChasePlayerState();
-    StateMachine* sm = new StateMachine();
+    StateMachine sm;
     GameManager* gameManager = new GameManager(agents);
     Agent* predator_bug = nullptr;
     Agent* prey_bug = nullptr;
+    wander = new Wander(steering, debug_circle, timer);
+    wander2 = new Wander(steering, debug_circle, timer);
 
-    sm->init_currentState(wanderState);
-
+    sm.init_currentState(wanderState);
+    
+    prey_bug = new Agent(bug_texture, sm, gameManager);
+    
     //Add Predior Bugs
+    prey_bug->ID = 0;
+    prey_bug->initial_frame_y = 2;
+    prey_bug->max_speed = 50;
+
+    prey_bug->AddBehaviour(wander);
+    prey_bug->SetPosition({ 928,512 });
     chase = new Chase(prey_bug, 120);//Target,Speed
+    agents.push_back(prey_bug);
+    
     for (int i = 1; i < 2; i++) {//Add bugs
-        sm->requestStateChange(chaseState);
+        //sm->requestStateChange(chaseState);
         predator_bug = new Agent(bug_texture,sm, gameManager);//Heap allocated.
         predator_bug->ID = i;
         predator_bug->initial_frame_y = 6;//i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
-        //bug->AddBehaviour(new Chase(player, 8000));
-        wander = new Wander(predator_bug, steering, debug_circle, timer);
-        predator_bug->AddBehaviour(wander);//Add a path behaviour
+        predator_bug->AddBehaviour(wander2);//Add a path behaviour
         predator_bug->AddBehaviour(chase);
         predator_bug->AddBehaviour(path_behavior);
         predator_bug->SetPosition({ 96, 992 });//({ 100 + 20*i, 100 });
@@ -162,18 +173,19 @@ int main(int argc, char* argv[])
         agents.push_back(predator_bug);//iterate through array and remove pointer.
     }
     //Add Prey Bugs white bug
-    prey_bug = new Agent(bug_texture, sm, gameManager);
-    prey_bug->ID = 0;
-    prey_bug->initial_frame_y = 2;
-    prey_bug->max_speed = 50;
-    
-    wander = new Wander(prey_bug, steering, debug_circle, timer);
-    chase2 = new Chase(predator_bug, 100);//Target,Speed
 
-    prey_bug->AddBehaviour(wander);
+    chase2 = new Chase(predator_bug, 100);//Target,Speed
     prey_bug->AddBehaviour(chase2);
-    prey_bug->SetPosition({ 928,512 });
-    agents.push_back(prey_bug);
+
+    prey_bug->gameManager->agents = agents;//update agents in units.
+    predator_bug->gameManager->agents = agents;
+
+    //Set States
+
+    //predator_bug->sm.requestStateChange(predator_bug->chaseState);
+    //prey_bug->sm.requestStateChange(prey_bug->wanderState);
+    
+
     float deltaTime = 0;
     //--------------------------------------------------------------------------------------
     // Main game loop

@@ -5,7 +5,9 @@
 #include <glm/glm.hpp>
 #include <raylib.h>
 #include <ChasePlayerState.h>
+#include "StateMachine.h"
 #include<WanderState.h>
+
 class GameManager;
 
 extern int screenx; //Dirty don't use
@@ -17,10 +19,10 @@ class StateMachine;
 class Agent
 {
 	public:
-	Agent(Texture t, StateMachine* sm, GameManager* gm);
+	Agent(Texture t, StateMachine sm, GameManager* gm);
 	~Agent();
 
-	virtual void Update(float deltaTime, StateMachine* sm);
+	virtual void Update(float deltaTime, StateMachine sm);
 	virtual void Draw();
 
 	void AddBehaviour(Behaviour*);
@@ -32,10 +34,11 @@ class Agent
 	void SetVelocity(glm::vec2 velocity);
 	const glm::vec2& GetVelocity() const;
 	void AddForce(glm::vec2 force); //Mostly used by Behaviours
-
+	bool DetectAgent(Agent*);
 	WanderState* wanderState;
 	ChasePlayerState* chaseState;
 	GameManager* gameManager;
+	StateMachine sm;
 	
 	float max_speed = 10000000;
 	float max_force = 500;
@@ -55,5 +58,4 @@ private:
 
 	Color colour{0,0,0};
 	Texture texture;
-	StateMachine* sm;
 };

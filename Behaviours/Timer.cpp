@@ -9,7 +9,7 @@ struct Timer
 		float startFrame;
 		Timer(double ct) : currentTime{ ct }{
 			startFrame = currentTime;
-			endFrame = currentTime + 1.6f;
+			endFrame = currentTime + 0.6f;//Time to wait
 		};
 		~Timer(){};
 	
@@ -21,7 +21,7 @@ struct Timer
 	}
 	float set_endTime(float startFrame)
 	{
-		return endFrame = startFrame + 1.6f;
+		return endFrame = startFrame + 0.6f;//Time to wait
 	}
 	bool update_timer(double currentTime, float endFrame)
 	{
