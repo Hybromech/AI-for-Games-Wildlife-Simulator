@@ -19,10 +19,10 @@ class StateMachine;
 class Agent
 {
 	public:
-	Agent(Texture t, StateMachine sm, GameManager* gm);
+	Agent(Texture t, StateMachine* sm, GameManager* gm);
 	~Agent();
 
-	virtual void Update(float deltaTime, StateMachine sm);
+	virtual void Update(float deltaTime);
 	virtual void Draw();
 
 	void AddBehaviour(Behaviour*);
@@ -38,10 +38,14 @@ class Agent
 	WanderState* wanderState;
 	ChasePlayerState* chaseState;
 	GameManager* gameManager;
-	StateMachine sm;
+	StateMachine* sm;
 	
-	float max_speed = 10000000;
-	float max_force = 500;
+	float speed = 0;
+	float wanderSpeed = 5;
+	//float fleeSpeed = 70;
+	//float chaseSpeed = 65;
+	float max_speed = 10000;
+	float max_force = 40.5;
 
 	//Animation
 	int initial_frame_x = 4;

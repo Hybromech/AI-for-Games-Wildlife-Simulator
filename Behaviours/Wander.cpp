@@ -1,14 +1,14 @@
 #include "Wander.h"
 
 
-Wander::Wander(Behaviours::SteeringBehaviour* sb, Circle c,Timer t)
-	: Behaviour(),steering{ sb }, circle{ c }, timer{ t }
+Wander::Wander(Behaviours::SteeringBehaviour* sb, Circle c, Timer t)
+	: Behaviour(), steering{ sb }, circle{ c }, timer{ t }
 {}
 
 Wander::~Wander() {}
 
 bool Wander::Update(Agent* agent, float deltaTime) {
-	
+	agent->speed = agent->wanderSpeed;
 	circle = updateCircle(circle,0,360,30,false);
 	
 	circle.origin = agent->GetPosition();

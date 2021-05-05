@@ -14,10 +14,11 @@ bool GameManager::DetectAgent(Agent* calling_agent)
 	std::cout << "Updated Detect Agent!" << std::endl;
 	for (auto element : agents)
 	{
-		if (element->ID != calling_agent->ID);
+		if (element->ID != calling_agent->ID)
 		{
+			auto distance = glm::distance(calling_agent->GetPosition(), element->GetPosition());
 			std::cout << "DetectAgent: Distance" << glm::distance(calling_agent->GetPosition(), element->GetPosition());
-			if (glm::distance(calling_agent->GetPosition(), element->GetPosition()) < 30)
+			if (distance < 100)
 			{
 				std::cout << "DetectAgent: Agent in range!" << std::endl;
 				return true;
@@ -25,6 +26,6 @@ bool GameManager::DetectAgent(Agent* calling_agent)
 			else return false;
 		}
 	}
-	//Work out the distance to the target and see if it is in range.
-	
+	return false;
+	//Work out the distance to the target and see if it is in range.	
 }

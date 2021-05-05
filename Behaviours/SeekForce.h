@@ -16,12 +16,12 @@ class SeekForce : public SteeringForce
 		point_target = point_set;
 	}
 	virtual glm::vec2 GetForce(Agent* agent) override {
-		auto desired_velocity = glm::normalize(target->GetPosition() - agent->GetPosition()) * agent->max_speed;
+		auto desired_velocity = glm::normalize(target->GetPosition() - agent->GetPosition()) * agent->speed;
 		auto steering_force = desired_velocity - agent->GetVelocity();
 		return steering_force;
 	}
 		virtual glm::vec2 GetForce_point(Agent * agent) override {
-			auto desired_velocity = glm::normalize(point_target - agent->GetPosition()) * agent->max_speed;
+			auto desired_velocity = glm::normalize(point_target - agent->GetPosition()) * agent->speed;
 			auto steering_force = desired_velocity - agent->GetVelocity();
 			return steering_force;
 	}

@@ -11,7 +11,6 @@ private:
 	//const Agent* agent;//does not need to be a shared pointer.
 	Behaviours::SteeringBehaviour* steering;
 	Circle circle;
-
 	Timer timer;
 public:
 	Wander(Behaviours::SteeringBehaviour* sb, Circle c, Timer t);

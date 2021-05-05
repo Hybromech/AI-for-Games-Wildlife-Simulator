@@ -1,0 +1,22 @@
+﻿  Agent.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(7,10): fatal error C1083: Cannot open include file: 'ChasePlayerState.h': No such file or directory
+  Chase.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\Chase.cpp(2,10): fatal error C1083: Cannot open include file: 'agent.h': No such file or directory
+  InstantKeyboard.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\InstantKeyboard.cpp(2,10): fatal error C1083: Cannot open include file: 'Agent.h': No such file or directory
+  KeyboardBehaviour.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\KeyboardBehaviour.cpp(2,10): fatal error C1083: Cannot open include file: 'Agent.h': No such file or directory
+  PathFollowBehaviour.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\PathFollowBehaviour.h(4,9): fatal error C1083: Cannot open include file: 'Graph.h': No such file or directory
+  Wander.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Behaviours\SteeringBehaviour.h(3,10): fatal error C1083: Cannot open include file: 'Agent.h': No such file or directory
+  ChasePlayerState.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\ChasePlayerState.h(3,10): fatal error C1083: Cannot open include file: 'Behaviour.h': No such file or directory
+  GameManager.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(7,10): fatal error C1083: Cannot open include file: 'ChasePlayerState.h': No such file or directory
+  Idle.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Idle.h(3,10): fatal error C1083: Cannot open include file: 'Behaviour.h': No such file or directory
+  main.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(7,10): fatal error C1083: Cannot open include file: 'ChasePlayerState.h': No such file or directory
+  WanderState.cpp
+D:\Andrew\AIE\Diploma of Digital and Interactive Games\Subjects\AI for Games\AI_Game\Agent.h(7,10): fatal error C1083: Cannot open include file: 'ChasePlayerState.h': No such file or directory

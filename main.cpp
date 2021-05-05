@@ -1,21 +1,9 @@
 /*******************************************************************************************
 *
-*   raylib [core] example - Basic window
+*   Bug eat Bug simulator by Andrew Jonas.
+*   Last edited 5/05/2021
 *
-*   Welcome to raylib!
-*
-*   To test examples, just press F6 and execute raylib_compile_execute script
-*   Note that compiled executable is placed in the same folder as .c file
-*
-*   You can find all basic examples on C:\raylib\raylib\examples folder or
-*   raylib official webpage: www.raylib.com
-*
-*   Enjoy using raylib. :)
-*
-*   This example has been created using raylib 1.0 (www.raylib.com)
-*   raylib is licensed under an unmodified zlib/libpng license (View raylib.h for details)
-*
-*   Copyright (c) 2014 Ramon Santamaria (@raysan5)
+*   Using the Raylib library.
 *
 ********************************************************************************************/
 #pragma once
@@ -37,6 +25,7 @@
 #include "GameManager.h"
 #include "WanderState.h"
 #include "ChasePlayerState.h"
+#include "PathState.h"
 
 
 Path dijkstrasSearch(Node* startNode, Node* endNode);
@@ -103,7 +92,7 @@ int main(int argc, char* argv[])
     ResetGraph(&graph[0], &graph[graph.size() - 1]);
 
     int start = 0;
-    int end = 46;
+    int end = 0;
 
     auto path = dijkstrasSearch(&graph[start], &graph[end]);
     std::cout << "path size after search" << path.size();
@@ -134,35 +123,41 @@ int main(int argc, char* argv[])
     Wander* wander2 = nullptr;
     Chase* chase = nullptr;
     Chase* chase2 = nullptr;
+    Chase* flee = nullptr;
 
     //Add bug agents
     //Create new states
     WanderState* wanderState = new WanderState();
     ChasePlayerState* chaseState = new ChasePlayerState();
-    StateMachine sm;
+    PathState* pathstate = new PathState();
+    
+    StateMachine sm_prey;
+    StateMachine sm_predator;
+    
     GameManager* gameManager = new GameManager(agents);
     Agent* predator_bug = nullptr;
     Agent* prey_bug = nullptr;
-    wander = new Wander(steering, debug_circle, timer);
+    
+    wander = new Wander(steering, debug_circle, timer);//behaviours
     wander2 = new Wander(steering, debug_circle, timer);
-
-    sm.init_currentState(wanderState);
+    //Set initial states
+    sm_prey.init_currentState(wanderState);
+    sm_predator.init_currentState(pathstate);
     
-    prey_bug = new Agent(bug_texture, sm, gameManager);
+    prey_bug = new Agent(bug_texture, &sm_prey, gameManager);
     
-    //Add Predior Bugs
     prey_bug->ID = 0;
     prey_bug->initial_frame_y = 2;
-    prey_bug->max_speed = 50;
+    //prey_bug->max_speed = 50;
 
     prey_bug->AddBehaviour(wander);
     prey_bug->SetPosition({ 928,512 });
     chase = new Chase(prey_bug, 120);//Target,Speed
     agents.push_back(prey_bug);
-    
+    //Add Predior Bugs
     for (int i = 1; i < 2; i++) {//Add bugs
         //sm->requestStateChange(chaseState);
-        predator_bug = new Agent(bug_texture,sm, gameManager);//Heap allocated.
+        predator_bug = new Agent(bug_texture,&sm_predator, gameManager);//Heap allocated.
         predator_bug->ID = i;
         predator_bug->initial_frame_y = 6;//i % 7 * 2 + 2; //Pick any bug except yellow. could also read from file.
         predator_bug->AddBehaviour(wander2);//Add a path behaviour
@@ -174,8 +169,9 @@ int main(int argc, char* argv[])
     }
     //Add Prey Bugs white bug
 
+    flee = new Chase(predator_bug, -65);
     chase2 = new Chase(predator_bug, 100);//Target,Speed
-    prey_bug->AddBehaviour(chase2);
+    prey_bug->AddBehaviour(flee);
 
     prey_bug->gameManager->agents = agents;//update agents in units.
     predator_bug->gameManager->agents = agents;
@@ -190,6 +186,17 @@ int main(int argc, char* argv[])
     //--------------------------------------------------------------------------------------
     // Main game loop
     glm::vec2 target_point_pos = {0,0};
+    
+    //Initial path setup
+    auto bugPos = agents[1]->GetPosition();
+    bugPos.x = (int)(bugPos.x / tz);//convert into tile position.
+    bugPos.y = (int)(bugPos.y / tz);
+    end = 29 + 16 * mp.x;
+    int istart = bugPos.x + bugPos.y * mp.x;
+    std::cout << "result of path" << end;
+    path = dijkstrasSearch(&graph[istart], &graph[end]);
+    path_behavior->SetPath(path);
+    
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
         // Update
@@ -234,7 +241,7 @@ int main(int argc, char* argv[])
         //Draw hovered tile 
         DrawRectangleLines(mousePos.x * tz, mousePos.y * tz, tz, tz, Color{ 64,255,128,255 });
         for (auto a : agents) {
-            a->Update(deltaTime, sm);
+            a->Update(deltaTime);
         }
 
         ClearBackground(RAYWHITE);

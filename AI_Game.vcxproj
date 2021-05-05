@@ -157,6 +157,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Idle.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PathState.cpp" />
     <ClCompile Include="Path_Finding\DijkstrasSearch.cpp" />
     <ClCompile Include="Path_Finding\MakeNodeGrid.cpp" />
     <ClCompile Include="Path_Finding\MapReader.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="ChasePlayerState.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="Idle.h" />
+    <ClInclude Include="PathState.h" />
     <ClInclude Include="Path_Finding\Graph.h" />
     <ClInclude Include="Path_Finding\MakeNodeGrid.h" />
     <ClInclude Include="Path_Finding\MapReader.h" />
