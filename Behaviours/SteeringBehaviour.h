@@ -4,6 +4,9 @@
 
 namespace Behaviours
 {
+	///Base class for steering behaviours.
+	/**
+	*/
 	class SteeringBehaviour : public Behaviour
 	{
 	public:
@@ -11,7 +14,8 @@ namespace Behaviours
 	public:
 		SteeringBehaviour(SteeringForce* f) : Behaviour(), force{ f }{};//Constructor 
 
-		// Inherited via Behaviour
+		//Inherited via Behaviour
+		//!Adds a force to the given agent.
 		virtual bool Update(Agent* agent, float deltatime) override
 		{
 			agent->AddForce(force->GetForce_point(agent));

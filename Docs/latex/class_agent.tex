@@ -1,0 +1,277 @@
+\hypertarget{class_agent}{}\doxysection{Agent Class Reference}
+\label{class_agent}\index{Agent@{Agent}}
+
+
+Base entity game unit.  
+
+
+
+
+{\ttfamily \#include $<$Agent.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_agent_a260eca10b5eb64462885e14bbf2eeb88}{Agent}} (Texture t, \mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$\mbox{\hyperlink{class_agent_afd81a873ecb7058d0822e4ff2f274551}{sm}}, \mbox{\hyperlink{class_game_manager}{Game\+Manager}} $\ast$gm)
+\item 
+\mbox{\hyperlink{class_agent_ab8dd8d152605cf1339fed595376e83cb}{$\sim$\+Agent}} ()
+\item 
+virtual void \mbox{\hyperlink{class_agent_af5b27370a4152287833f88378fea535b}{Update}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em base update method. Updates the agent. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_agent_a91eb7654f1883169b7063f7bfa291d5a}{Draw}} ()
+\item 
+void \mbox{\hyperlink{class_agent_a715ac4ab92b5240bf2676388787ad495}{Add\+Behaviour}} (\mbox{\hyperlink{class_behaviour}{Behaviour}} $\ast$)
+\item 
+void \mbox{\hyperlink{class_agent_a6069c1258dc1dfe2fa54db310540e17f}{Set\+Position}} (glm\+::vec2 position)
+\item 
+const glm\+::vec2 \& \mbox{\hyperlink{class_agent_a911d48b66bd3bdaa45f56f496abf382c}{Get\+Position}} () const
+\item 
+void \mbox{\hyperlink{class_agent_a59fa1fba1f985dd01309053bff74b0e7}{Set\+Velocity}} (glm\+::vec2 velocity)
+\item 
+const glm\+::vec2 \& \mbox{\hyperlink{class_agent_aa2b64d9d9c8582a9727da6f3df7cdbfb}{Get\+Velocity}} () const
+\item 
+void \mbox{\hyperlink{class_agent_a9dfc0a3cd3eea3f5bcfd9c19cec662df}{Add\+Force}} (glm\+::vec2 force)
+\item 
+bool \mbox{\hyperlink{class_agent_acbc0ee8aa88c8252c3d948a6b58065fa}{Detect\+Agent}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_agent_aa110149495991ab8ace08d384976105f}{ID}}
+\item 
+\mbox{\hyperlink{class_wander_state}{Wander\+State}} $\ast$ \mbox{\hyperlink{class_agent_afd19bb2e39df03593793b7efdad93792}{wander\+State}}
+\item 
+\mbox{\hyperlink{class_chase_player_state}{Chase\+Player\+State}} $\ast$ \mbox{\hyperlink{class_agent_a77e65823c2c46dd35582ccca34f04d35}{chase\+State}}
+\item 
+\mbox{\hyperlink{class_game_manager}{Game\+Manager}} $\ast$ \mbox{\hyperlink{class_agent_a921b8e1e014958a78947a17dc330bbd1}{game\+Manager}}
+\item 
+\mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$ \mbox{\hyperlink{class_agent_afd81a873ecb7058d0822e4ff2f274551}{sm}}
+\item 
+float \mbox{\hyperlink{class_agent_ad50356175772b5684252087c21fd33c9}{speed}} = 0
+\begin{DoxyCompactList}\small\item\em The current speed of the agent. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_agent_a8d4d56318295f0fa46803a737445ffcf}{wander\+Speed}} = 5
+\begin{DoxyCompactList}\small\item\em The speed at which the agent will travel while wandering. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_agent_a8c19c66e69a68c09249c0e3f4aac42ee}{max\+\_\+speed}} = 10000
+\begin{DoxyCompactList}\small\item\em The maximum speed the agent can move. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_agent_a810a6facadf9715d47246bace7a6d627}{max\+\_\+force}} = 40.\+5
+\begin{DoxyCompactList}\small\item\em The maximum force the agent can apply to itself. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_agent_a23a614d5f609a79198ed30e52e612e61}{initial\+\_\+frame\+\_\+x}} = 4
+\begin{DoxyCompactList}\small\item\em The initial X frame position the animation starts on. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_agent_aba40aaba8cf8d163a49f95ce4abc6ddc}{initial\+\_\+frame\+\_\+y}} = 0
+\begin{DoxyCompactList}\small\item\em The initial Y frame position the animation starts on. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_agent_ad216852e75659177c155b29561096760}{frames\+\_\+ps}} = 15
+\begin{DoxyCompactList}\small\item\em The speed of the animation. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_agent_abc8838ad1590f533dadc9f229e8451b4}{steps}} = 8
+\begin{DoxyCompactList}\small\item\em How many frames to cycle. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_behaviour}{Behaviour}} $>$ $>$ \mbox{\hyperlink{class_agent_af58db6ca8ff2c777f8f57b06b4dca443}{m\+\_\+behaviours}}
+\begin{DoxyCompactList}\small\item\em Array of \mbox{\hyperlink{namespace_behaviours}{Behaviours}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base entity game unit. 
+
+Can modify position of self. Can pass information to the statemachine. Can detect another agent. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_agent_a260eca10b5eb64462885e14bbf2eeb88}\label{class_agent_a260eca10b5eb64462885e14bbf2eeb88}} 
+\index{Agent@{Agent}!Agent@{Agent}}
+\index{Agent@{Agent}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{Agent()}{Agent()}}
+{\footnotesize\ttfamily Agent\+::\+Agent (\begin{DoxyParamCaption}\item[{Texture}]{t,  }\item[{\mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$}]{sm,  }\item[{\mbox{\hyperlink{class_game_manager}{Game\+Manager}} $\ast$}]{gm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_agent_ab8dd8d152605cf1339fed595376e83cb}\label{class_agent_ab8dd8d152605cf1339fed595376e83cb}} 
+\index{Agent@{Agent}!````~Agent@{$\sim$Agent}}
+\index{````~Agent@{$\sim$Agent}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{$\sim$Agent()}{~Agent()}}
+{\footnotesize\ttfamily Agent\+::$\sim$\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_agent_a715ac4ab92b5240bf2676388787ad495}\label{class_agent_a715ac4ab92b5240bf2676388787ad495}} 
+\index{Agent@{Agent}!AddBehaviour@{AddBehaviour}}
+\index{AddBehaviour@{AddBehaviour}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{AddBehaviour()}{AddBehaviour()}}
+{\footnotesize\ttfamily void Agent\+::\+Add\+Behaviour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_behaviour}{Behaviour}} $\ast$}]{behaviour }\end{DoxyParamCaption})}
+
+Adds a behaviour \mbox{\Hypertarget{class_agent_a9dfc0a3cd3eea3f5bcfd9c19cec662df}\label{class_agent_a9dfc0a3cd3eea3f5bcfd9c19cec662df}} 
+\index{Agent@{Agent}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{AddForce()}{AddForce()}}
+{\footnotesize\ttfamily void Agent\+::\+Add\+Force (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{force }\end{DoxyParamCaption})}
+
+Adds forces to the agent. \mbox{\Hypertarget{class_agent_acbc0ee8aa88c8252c3d948a6b58065fa}\label{class_agent_acbc0ee8aa88c8252c3d948a6b58065fa}} 
+\index{Agent@{Agent}!DetectAgent@{DetectAgent}}
+\index{DetectAgent@{DetectAgent}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{DetectAgent()}{DetectAgent()}}
+{\footnotesize\ttfamily bool Agent\+::\+Detect\+Agent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+Detects other agents based on distance, returns false if the check fails. \mbox{\Hypertarget{class_agent_a91eb7654f1883169b7063f7bfa291d5a}\label{class_agent_a91eb7654f1883169b7063f7bfa291d5a}} 
+\index{Agent@{Agent}!Draw@{Draw}}
+\index{Draw@{Draw}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Agent\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Draw the agent on screen. \mbox{\Hypertarget{class_agent_a911d48b66bd3bdaa45f56f496abf382c}\label{class_agent_a911d48b66bd3bdaa45f56f496abf382c}} 
+\index{Agent@{Agent}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily const glm\+::vec2 \& Agent\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the position of the agent. \mbox{\Hypertarget{class_agent_aa2b64d9d9c8582a9727da6f3df7cdbfb}\label{class_agent_aa2b64d9d9c8582a9727da6f3df7cdbfb}} 
+\index{Agent@{Agent}!GetVelocity@{GetVelocity}}
+\index{GetVelocity@{GetVelocity}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{GetVelocity()}{GetVelocity()}}
+{\footnotesize\ttfamily const glm\+::vec2 \& Agent\+::\+Get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the velocity of the agent. \mbox{\Hypertarget{class_agent_a6069c1258dc1dfe2fa54db310540e17f}\label{class_agent_a6069c1258dc1dfe2fa54db310540e17f}} 
+\index{Agent@{Agent}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Agent\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{position }\end{DoxyParamCaption})}
+
+Sets the position of the agent. \mbox{\Hypertarget{class_agent_a59fa1fba1f985dd01309053bff74b0e7}\label{class_agent_a59fa1fba1f985dd01309053bff74b0e7}} 
+\index{Agent@{Agent}!SetVelocity@{SetVelocity}}
+\index{SetVelocity@{SetVelocity}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{SetVelocity()}{SetVelocity()}}
+{\footnotesize\ttfamily void Agent\+::\+Set\+Velocity (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{velocity }\end{DoxyParamCaption})}
+
+Sets the velocity for the agent. \mbox{\Hypertarget{class_agent_af5b27370a4152287833f88378fea535b}\label{class_agent_af5b27370a4152287833f88378fea535b}} 
+\index{Agent@{Agent}!Update@{Update}}
+\index{Update@{Update}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Agent\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+base update method. Updates the agent. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_agent_a77e65823c2c46dd35582ccca34f04d35}\label{class_agent_a77e65823c2c46dd35582ccca34f04d35}} 
+\index{Agent@{Agent}!chaseState@{chaseState}}
+\index{chaseState@{chaseState}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{chaseState}{chaseState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_chase_player_state}{Chase\+Player\+State}}$\ast$ Agent\+::chase\+State}
+
+\mbox{\Hypertarget{class_agent_ad216852e75659177c155b29561096760}\label{class_agent_ad216852e75659177c155b29561096760}} 
+\index{Agent@{Agent}!frames\_ps@{frames\_ps}}
+\index{frames\_ps@{frames\_ps}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{frames\_ps}{frames\_ps}}
+{\footnotesize\ttfamily float Agent\+::frames\+\_\+ps = 15}
+
+
+
+The speed of the animation. 
+
+\mbox{\Hypertarget{class_agent_a921b8e1e014958a78947a17dc330bbd1}\label{class_agent_a921b8e1e014958a78947a17dc330bbd1}} 
+\index{Agent@{Agent}!gameManager@{gameManager}}
+\index{gameManager@{gameManager}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{gameManager}{gameManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_manager}{Game\+Manager}}$\ast$ Agent\+::game\+Manager}
+
+\mbox{\Hypertarget{class_agent_aa110149495991ab8ace08d384976105f}\label{class_agent_aa110149495991ab8ace08d384976105f}} 
+\index{Agent@{Agent}!ID@{ID}}
+\index{ID@{ID}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily int Agent\+::\+ID}
+
+The unique agent ID number \mbox{\Hypertarget{class_agent_a23a614d5f609a79198ed30e52e612e61}\label{class_agent_a23a614d5f609a79198ed30e52e612e61}} 
+\index{Agent@{Agent}!initial\_frame\_x@{initial\_frame\_x}}
+\index{initial\_frame\_x@{initial\_frame\_x}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{initial\_frame\_x}{initial\_frame\_x}}
+{\footnotesize\ttfamily int Agent\+::initial\+\_\+frame\+\_\+x = 4}
+
+
+
+The initial X frame position the animation starts on. 
+
+\mbox{\Hypertarget{class_agent_aba40aaba8cf8d163a49f95ce4abc6ddc}\label{class_agent_aba40aaba8cf8d163a49f95ce4abc6ddc}} 
+\index{Agent@{Agent}!initial\_frame\_y@{initial\_frame\_y}}
+\index{initial\_frame\_y@{initial\_frame\_y}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{initial\_frame\_y}{initial\_frame\_y}}
+{\footnotesize\ttfamily int Agent\+::initial\+\_\+frame\+\_\+y = 0}
+
+
+
+The initial Y frame position the animation starts on. 
+
+\mbox{\Hypertarget{class_agent_af58db6ca8ff2c777f8f57b06b4dca443}\label{class_agent_af58db6ca8ff2c777f8f57b06b4dca443}} 
+\index{Agent@{Agent}!m\_behaviours@{m\_behaviours}}
+\index{m\_behaviours@{m\_behaviours}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{m\_behaviours}{m\_behaviours}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_behaviour}{Behaviour}}$>$ $>$ Agent\+::m\+\_\+behaviours}
+
+
+
+Array of \mbox{\hyperlink{namespace_behaviours}{Behaviours}}. 
+
+\mbox{\Hypertarget{class_agent_a810a6facadf9715d47246bace7a6d627}\label{class_agent_a810a6facadf9715d47246bace7a6d627}} 
+\index{Agent@{Agent}!max\_force@{max\_force}}
+\index{max\_force@{max\_force}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{max\_force}{max\_force}}
+{\footnotesize\ttfamily float Agent\+::max\+\_\+force = 40.\+5}
+
+
+
+The maximum force the agent can apply to itself. 
+
+\mbox{\Hypertarget{class_agent_a8c19c66e69a68c09249c0e3f4aac42ee}\label{class_agent_a8c19c66e69a68c09249c0e3f4aac42ee}} 
+\index{Agent@{Agent}!max\_speed@{max\_speed}}
+\index{max\_speed@{max\_speed}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{max\_speed}{max\_speed}}
+{\footnotesize\ttfamily float Agent\+::max\+\_\+speed = 10000}
+
+
+
+The maximum speed the agent can move. 
+
+\mbox{\Hypertarget{class_agent_afd81a873ecb7058d0822e4ff2f274551}\label{class_agent_afd81a873ecb7058d0822e4ff2f274551}} 
+\index{Agent@{Agent}!sm@{sm}}
+\index{sm@{sm}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{sm}{sm}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state_machine}{State\+Machine}}$\ast$ Agent\+::sm}
+
+\mbox{\Hypertarget{class_agent_ad50356175772b5684252087c21fd33c9}\label{class_agent_ad50356175772b5684252087c21fd33c9}} 
+\index{Agent@{Agent}!speed@{speed}}
+\index{speed@{speed}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Agent\+::speed = 0}
+
+
+
+The current speed of the agent. 
+
+\mbox{\Hypertarget{class_agent_abc8838ad1590f533dadc9f229e8451b4}\label{class_agent_abc8838ad1590f533dadc9f229e8451b4}} 
+\index{Agent@{Agent}!steps@{steps}}
+\index{steps@{steps}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{steps}{steps}}
+{\footnotesize\ttfamily int Agent\+::steps = 8}
+
+
+
+How many frames to cycle. 
+
+\mbox{\Hypertarget{class_agent_a8d4d56318295f0fa46803a737445ffcf}\label{class_agent_a8d4d56318295f0fa46803a737445ffcf}} 
+\index{Agent@{Agent}!wanderSpeed@{wanderSpeed}}
+\index{wanderSpeed@{wanderSpeed}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{wanderSpeed}{wanderSpeed}}
+{\footnotesize\ttfamily float Agent\+::wander\+Speed = 5}
+
+
+
+The speed at which the agent will travel while wandering. 
+
+\mbox{\Hypertarget{class_agent_afd19bb2e39df03593793b7efdad93792}\label{class_agent_afd19bb2e39df03593793b7efdad93792}} 
+\index{Agent@{Agent}!wanderState@{wanderState}}
+\index{wanderState@{wanderState}!Agent@{Agent}}
+\doxysubsubsection{\texorpdfstring{wanderState}{wanderState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_wander_state}{Wander\+State}}$\ast$ Agent\+::wander\+State}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\mbox{\hyperlink{_agent_8h}{Agent.\+h}}\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\mbox{\hyperlink{_agent_8cpp}{Agent.\+cpp}}\end{DoxyCompactItemize}

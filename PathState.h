@@ -3,7 +3,9 @@
 class Behaviour;
 class Agent;
 
-//class state;
+///A state associated with pathfinding.
+/**
+*/
 class PathState : public State
 {
 	void update(Agent* agent, StateMachine* sm, float deltaTime)override;

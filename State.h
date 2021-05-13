@@ -2,7 +2,9 @@
 class Agent;
 class StateMachine;
 
-//Abstract base class
+///Base class for all states.
+/**
+*/
 class State
 {
 	public:

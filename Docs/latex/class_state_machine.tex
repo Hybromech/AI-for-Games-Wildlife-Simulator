@@ -1,0 +1,101 @@
+\hypertarget{class_state_machine}{}\doxysection{State\+Machine Class Reference}
+\label{class_state_machine}\index{StateMachine@{StateMachine}}
+
+
+\mbox{\hyperlink{class_state}{State}} Machine manages and manipulates states.  
+
+
+
+
+{\ttfamily \#include $<$State\+Machine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_state_machine_a2fb07002510ea9141019559750acfab8}{State\+Machine}} ()
+\item 
+\mbox{\hyperlink{class_state_machine_a93d66cb2a89b186789d655a08b02674e}{$\sim$\+State\+Machine}} ()
+\item 
+void \mbox{\hyperlink{class_state_machine_ab156ca278a4ab7959a75844f3066bf23}{update}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$agent, \mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$sm, float delta\+Time)
+\item 
+void \mbox{\hyperlink{class_state_machine_a29621ff325e9810f769be7fab7fd01f6}{request\+State\+Change}} (\mbox{\hyperlink{class_state}{State}} $\ast$new\+State)
+\begin{DoxyCompactList}\small\item\em Changes the current state with new\+State. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_state_machine_ae2be821258a56240d9f39c1dd7c233f7}{init\+\_\+current\+State}} (\mbox{\hyperlink{class_state}{State}} $\ast$init\+State)
+\begin{DoxyCompactList}\small\item\em Initialise the beginning state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_state}{State}} $\ast$ \mbox{\hyperlink{class_state_machine_a506ccbf70c4da8654a3f6be175016fbe}{get\+Current\+State}} ()
+\begin{DoxyCompactList}\small\item\em Return the current state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_state}{State}} $\ast$ \mbox{\hyperlink{class_state_machine_a91f7703cbdc3e19373ffd482ee312056}{get\+Prev\+State}} ()
+\begin{DoxyCompactList}\small\item\em Return the Previous state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_state}{State}} Machine manages and manipulates states. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_state_machine_a2fb07002510ea9141019559750acfab8}\label{class_state_machine_a2fb07002510ea9141019559750acfab8}} 
+\index{StateMachine@{StateMachine}!StateMachine@{StateMachine}}
+\index{StateMachine@{StateMachine}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{StateMachine()}{StateMachine()}}
+{\footnotesize\ttfamily State\+Machine\+::\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_state_machine_a93d66cb2a89b186789d655a08b02674e}\label{class_state_machine_a93d66cb2a89b186789d655a08b02674e}} 
+\index{StateMachine@{StateMachine}!````~StateMachine@{$\sim$StateMachine}}
+\index{````~StateMachine@{$\sim$StateMachine}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{$\sim$StateMachine()}{~StateMachine()}}
+{\footnotesize\ttfamily State\+Machine\+::$\sim$\+State\+Machine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_state_machine_a506ccbf70c4da8654a3f6be175016fbe}\label{class_state_machine_a506ccbf70c4da8654a3f6be175016fbe}} 
+\index{StateMachine@{StateMachine}!getCurrentState@{getCurrentState}}
+\index{getCurrentState@{getCurrentState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{getCurrentState()}{getCurrentState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state}{State}} $\ast$ State\+Machine\+::get\+Current\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the current state. 
+
+\mbox{\Hypertarget{class_state_machine_a91f7703cbdc3e19373ffd482ee312056}\label{class_state_machine_a91f7703cbdc3e19373ffd482ee312056}} 
+\index{StateMachine@{StateMachine}!getPrevState@{getPrevState}}
+\index{getPrevState@{getPrevState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{getPrevState()}{getPrevState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_state}{State}} $\ast$ State\+Machine\+::get\+Prev\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the Previous state. 
+
+\mbox{\Hypertarget{class_state_machine_ae2be821258a56240d9f39c1dd7c233f7}\label{class_state_machine_ae2be821258a56240d9f39c1dd7c233f7}} 
+\index{StateMachine@{StateMachine}!init\_currentState@{init\_currentState}}
+\index{init\_currentState@{init\_currentState}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{init\_currentState()}{init\_currentState()}}
+{\footnotesize\ttfamily void State\+Machine\+::init\+\_\+current\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}} $\ast$}]{init\+State }\end{DoxyParamCaption})}
+
+
+
+Initialise the beginning state. 
+
+\mbox{\Hypertarget{class_state_machine_a29621ff325e9810f769be7fab7fd01f6}\label{class_state_machine_a29621ff325e9810f769be7fab7fd01f6}} 
+\index{StateMachine@{StateMachine}!requestStateChange@{requestStateChange}}
+\index{requestStateChange@{requestStateChange}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{requestStateChange()}{requestStateChange()}}
+{\footnotesize\ttfamily void State\+Machine\+::request\+State\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_state}{State}} $\ast$}]{new\+State }\end{DoxyParamCaption})}
+
+
+
+Changes the current state with new\+State. 
+
+\mbox{\Hypertarget{class_state_machine_ab156ca278a4ab7959a75844f3066bf23}\label{class_state_machine_ab156ca278a4ab7959a75844f3066bf23}} 
+\index{StateMachine@{StateMachine}!update@{update}}
+\index{update@{update}!StateMachine@{StateMachine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void State\+Machine\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{agent,  }\item[{\mbox{\hyperlink{class_state_machine}{State\+Machine}} $\ast$}]{sm,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\mbox{\hyperlink{_state_machine_8h}{State\+Machine.\+h}}\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\mbox{\hyperlink{_state_machine_8cpp}{State\+Machine.\+cpp}}\end{DoxyCompactItemize}

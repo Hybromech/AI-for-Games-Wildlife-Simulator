@@ -3,7 +3,9 @@
 class Behaviour;
 class Agent;
 
-//class state;
+///A state associated with wandering.
+/**
+*/
 class WanderState : public State
 {
 	void update(Agent* agent, StateMachine* sm, float deltaTime)override;

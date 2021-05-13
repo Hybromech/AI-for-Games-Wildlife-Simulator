@@ -1,0 +1,79 @@
+\hypertarget{class_steering_force}{}\doxysection{Steering\+Force Class Reference}
+\label{class_steering_force}\index{SteeringForce@{SteeringForce}}
+
+
+Class that handles steering forces.  
+
+
+
+
+{\ttfamily \#include $<$Steering\+Force.\+h$>$}
+
+Inheritance diagram for Steering\+Force\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_steering_force}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_steering_force_a36c51ba4a2e3bc5b50c89a799e80a5b6}{Set\+\_\+point}} (glm\+::vec2)=0
+\begin{DoxyCompactList}\small\item\em Sets the internal point target variable to the provided point. \end{DoxyCompactList}\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_steering_force_a1170eefe1bdfa4864af3a95db95099e3}{Get\+Force}} (class \mbox{\hyperlink{class_agent}{Agent}} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Returns a force in the direction of the agent. \end{DoxyCompactList}\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_steering_force_a6991452c09a1ca20dc9041e99a61b084}{Get\+Force\+\_\+point}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$agent)=0
+\begin{DoxyCompactList}\small\item\em Returns a force in the direction of the agent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that handles steering forces. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_steering_force_a1170eefe1bdfa4864af3a95db95099e3}\label{class_steering_force_a1170eefe1bdfa4864af3a95db95099e3}} 
+\index{SteeringForce@{SteeringForce}!GetForce@{GetForce}}
+\index{GetForce@{GetForce}!SteeringForce@{SteeringForce}}
+\doxysubsubsection{\texorpdfstring{GetForce()}{GetForce()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 Steering\+Force\+::\+Get\+Force (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a force in the direction of the agent. 
+
+
+
+Implemented in \mbox{\hyperlink{class_flee_force_aa9efdc4e42b66f2df49b3ac37a3eb5c9}{Flee\+Force}}, and \mbox{\hyperlink{class_seek_force_ae811d530732c10742b09a7cfcab8a271}{Seek\+Force}}.
+
+\mbox{\Hypertarget{class_steering_force_a6991452c09a1ca20dc9041e99a61b084}\label{class_steering_force_a6991452c09a1ca20dc9041e99a61b084}} 
+\index{SteeringForce@{SteeringForce}!GetForce\_point@{GetForce\_point}}
+\index{GetForce\_point@{GetForce\_point}!SteeringForce@{SteeringForce}}
+\doxysubsubsection{\texorpdfstring{GetForce\_point()}{GetForce\_point()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 Steering\+Force\+::\+Get\+Force\+\_\+point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a force in the direction of the agent. 
+
+
+
+Implemented in \mbox{\hyperlink{class_seek_force_a0814b70d6dcc43cd07db0aa84b6ab9ae}{Seek\+Force}}.
+
+\mbox{\Hypertarget{class_steering_force_a36c51ba4a2e3bc5b50c89a799e80a5b6}\label{class_steering_force_a36c51ba4a2e3bc5b50c89a799e80a5b6}} 
+\index{SteeringForce@{SteeringForce}!Set\_point@{Set\_point}}
+\index{Set\_point@{Set\_point}!SteeringForce@{SteeringForce}}
+\doxysubsubsection{\texorpdfstring{Set\_point()}{Set\_point()}}
+{\footnotesize\ttfamily virtual void Steering\+Force\+::\+Set\+\_\+point (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the internal point target variable to the provided point. 
+
+
+
+Implemented in \mbox{\hyperlink{class_seek_force_a52bfcb0be6dfc657f0de9e778886e4b4}{Seek\+Force}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\+Behaviours/\mbox{\hyperlink{_steering_force_8h}{Steering\+Force.\+h}}\end{DoxyCompactItemize}

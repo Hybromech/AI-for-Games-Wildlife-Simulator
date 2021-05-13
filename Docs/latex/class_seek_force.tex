@@ -1,0 +1,122 @@
+\hypertarget{class_seek_force}{}\doxysection{Seek\+Force Class Reference}
+\label{class_seek_force}\index{SeekForce@{SeekForce}}
+
+
+Provides methods that return a steering force.  
+
+
+
+
+{\ttfamily \#include $<$Seek\+Force.\+h$>$}
+
+Inheritance diagram for Seek\+Force\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_seek_force}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_seek_force_afd699f5b5ffffdfcee82499f6af4b31b}{Seek\+Force}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$t)
+\item 
+\mbox{\hyperlink{class_seek_force_a8199952b04ebf6c6419e1668ef23e3ad}{Seek\+Force}} (glm\+::vec2 t)
+\item 
+virtual void \mbox{\hyperlink{class_seek_force_a52bfcb0be6dfc657f0de9e778886e4b4}{Set\+\_\+point}} (glm\+::vec2 point\+\_\+set) override
+\begin{DoxyCompactList}\small\item\em Sets the position of a point. \end{DoxyCompactList}\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_seek_force_ae811d530732c10742b09a7cfcab8a271}{Get\+Force}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$agent) override
+\begin{DoxyCompactList}\small\item\em Returns a steering force based on given agents position. ~\newline
+ \end{DoxyCompactList}\item 
+virtual glm\+::vec2 \mbox{\hyperlink{class_seek_force_a0814b70d6dcc43cd07db0aa84b6ab9ae}{Get\+Force\+\_\+point}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$agent) override
+\begin{DoxyCompactList}\small\item\em Returns a steering force based on given point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec2 \mbox{\hyperlink{class_seek_force_ab71659ab23ebe4c48cbfe880dd2d6bf1}{point\+\_\+target}}
+\begin{DoxyCompactList}\small\item\em An arbitry point that can be used to apply a force. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides methods that return a steering force. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_seek_force_afd699f5b5ffffdfcee82499f6af4b31b}\label{class_seek_force_afd699f5b5ffffdfcee82499f6af4b31b}} 
+\index{SeekForce@{SeekForce}!SeekForce@{SeekForce}}
+\index{SeekForce@{SeekForce}!SeekForce@{SeekForce}}
+\doxysubsubsection{\texorpdfstring{SeekForce()}{SeekForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Seek\+Force\+::\+Seek\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_seek_force_a8199952b04ebf6c6419e1668ef23e3ad}\label{class_seek_force_a8199952b04ebf6c6419e1668ef23e3ad}} 
+\index{SeekForce@{SeekForce}!SeekForce@{SeekForce}}
+\index{SeekForce@{SeekForce}!SeekForce@{SeekForce}}
+\doxysubsubsection{\texorpdfstring{SeekForce()}{SeekForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Seek\+Force\+::\+Seek\+Force (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_seek_force_ae811d530732c10742b09a7cfcab8a271}\label{class_seek_force_ae811d530732c10742b09a7cfcab8a271}} 
+\index{SeekForce@{SeekForce}!GetForce@{GetForce}}
+\index{GetForce@{GetForce}!SeekForce@{SeekForce}}
+\doxysubsubsection{\texorpdfstring{GetForce()}{GetForce()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 Seek\+Force\+::\+Get\+Force (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a steering force based on given agents position. ~\newline
+ 
+
+
+
+Implements \mbox{\hyperlink{class_steering_force_a1170eefe1bdfa4864af3a95db95099e3}{Steering\+Force}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_flee_force_aa9efdc4e42b66f2df49b3ac37a3eb5c9}{Flee\+Force}}.
+
+\mbox{\Hypertarget{class_seek_force_a0814b70d6dcc43cd07db0aa84b6ab9ae}\label{class_seek_force_a0814b70d6dcc43cd07db0aa84b6ab9ae}} 
+\index{SeekForce@{SeekForce}!GetForce\_point@{GetForce\_point}}
+\index{GetForce\_point@{GetForce\_point}!SeekForce@{SeekForce}}
+\doxysubsubsection{\texorpdfstring{GetForce\_point()}{GetForce\_point()}}
+{\footnotesize\ttfamily virtual glm\+::vec2 Seek\+Force\+::\+Get\+Force\+\_\+point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{agent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a steering force based on given point. 
+
+
+
+Implements \mbox{\hyperlink{class_steering_force_a6991452c09a1ca20dc9041e99a61b084}{Steering\+Force}}.
+
+\mbox{\Hypertarget{class_seek_force_a52bfcb0be6dfc657f0de9e778886e4b4}\label{class_seek_force_a52bfcb0be6dfc657f0de9e778886e4b4}} 
+\index{SeekForce@{SeekForce}!Set\_point@{Set\_point}}
+\index{Set\_point@{Set\_point}!SeekForce@{SeekForce}}
+\doxysubsubsection{\texorpdfstring{Set\_point()}{Set\_point()}}
+{\footnotesize\ttfamily virtual void Seek\+Force\+::\+Set\+\_\+point (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{point\+\_\+set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the position of a point. 
+
+
+
+Implements \mbox{\hyperlink{class_steering_force_a36c51ba4a2e3bc5b50c89a799e80a5b6}{Steering\+Force}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_seek_force_ab71659ab23ebe4c48cbfe880dd2d6bf1}\label{class_seek_force_ab71659ab23ebe4c48cbfe880dd2d6bf1}} 
+\index{SeekForce@{SeekForce}!point\_target@{point\_target}}
+\index{point\_target@{point\_target}!SeekForce@{SeekForce}}
+\doxysubsubsection{\texorpdfstring{point\_target}{point\_target}}
+{\footnotesize\ttfamily glm\+::vec2 Seek\+Force\+::point\+\_\+target}
+
+
+
+An arbitry point that can be used to apply a force. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\+Behaviours/\mbox{\hyperlink{_seek_force_8h}{Seek\+Force.\+h}}\end{DoxyCompactItemize}

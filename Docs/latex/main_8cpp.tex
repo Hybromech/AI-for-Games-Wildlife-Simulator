@@ -1,0 +1,64 @@
+\hypertarget{main_8cpp}{}\doxysection{D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/main.cpp File Reference}
+\label{main_8cpp}\index{D:/Andrew/AIE/Diploma of Digital and Interactive Games/Subjects/AI for Games/AI\_Game/main.cpp@{D:/Andrew/AIE/Diploma of Digital and Interactive Games/Subjects/AI for Games/AI\_Game/main.cpp}}
+{\ttfamily \#include $<$raylib.\+h$>$}\newline
+{\ttfamily \#include $<$glm/glm.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}Agent.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Keyboard\+Behaviour.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Instant\+Keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Chase.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Wander.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Steering\+Behaviour.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Seek\+Force.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Path\+Follow\+Behaviour.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$Path\+\_\+\+Finding\textbackslash{}\+Map\+Reader.\+h$>$}\newline
+{\ttfamily \#include $<$Path\+\_\+\+Finding\textbackslash{}\+Make\+Node\+Grid.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}State\+Machine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Wander\+\_\+\+Circle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Timer.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Wander\+State.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Chase\+Player\+State.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Path\+State.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_managed_texture}{Managed\+Texture}}
+\begin{DoxyCompactList}\small\item\em Unload texture from GPU memory (VRAM). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dijkstras_search_8cpp_ad6c0ccaf08b97f17d293e1058f983cc0}{Path}} \mbox{\hyperlink{main_8cpp_af0ccfc969635eddcdd62ed3e82aeecdb}{dijkstras\+Search}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$start\+Node, \mbox{\hyperlink{struct_node}{Node}} $\ast$end\+Node)
+\item 
+void \mbox{\hyperlink{main_8cpp_a4638b31ab5af026adf74bafbdf2937bb}{Draw\+Path}} (const \mbox{\hyperlink{_dijkstras_search_8cpp_ad6c0ccaf08b97f17d293e1058f983cc0}{Path}} \&path)
+\item 
+void \mbox{\hyperlink{main_8cpp_aa66be4094f527ea0e85ed744ea3bfbb9}{Reset\+Graph}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$start, \mbox{\hyperlink{struct_node}{Node}} $\ast$end)
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_af0ccfc969635eddcdd62ed3e82aeecdb}\label{main_8cpp_af0ccfc969635eddcdd62ed3e82aeecdb}} 
+\index{main.cpp@{main.cpp}!dijkstrasSearch@{dijkstrasSearch}}
+\index{dijkstrasSearch@{dijkstrasSearch}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{dijkstrasSearch()}{dijkstrasSearch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_dijkstras_search_8cpp_ad6c0ccaf08b97f17d293e1058f983cc0}{Path}} dijkstras\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{start\+Node,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{end\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a4638b31ab5af026adf74bafbdf2937bb}\label{main_8cpp_a4638b31ab5af026adf74bafbdf2937bb}} 
+\index{main.cpp@{main.cpp}!DrawPath@{DrawPath}}
+\index{DrawPath@{DrawPath}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DrawPath()}{DrawPath()}}
+{\footnotesize\ttfamily void Draw\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_dijkstras_search_8cpp_ad6c0ccaf08b97f17d293e1058f983cc0}{Path}} \&}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8cpp_aa66be4094f527ea0e85ed744ea3bfbb9}\label{main_8cpp_aa66be4094f527ea0e85ed744ea3bfbb9}} 
+\index{main.cpp@{main.cpp}!ResetGraph@{ResetGraph}}
+\index{ResetGraph@{ResetGraph}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ResetGraph()}{ResetGraph()}}
+{\footnotesize\ttfamily void Reset\+Graph (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{start,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{end }\end{DoxyParamCaption})}
+

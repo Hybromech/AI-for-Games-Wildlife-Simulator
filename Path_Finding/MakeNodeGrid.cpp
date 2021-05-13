@@ -9,7 +9,7 @@ std::vector<Node> BuildmodeGraph(const MapObject& mo, int tilesize, float* terra
 	std::vector<Node> graph;
 	graph.resize(mo.info.size());
 	
-	for (int id = 0; id < mo.info.size(); ++id) { // DJ BUG 5 the map file had a new line at the end making it 101 in size and going behond vector length
+	for (int id = 0; id < mo.info.size(); ++id) {
 		const int x = id % mo.x;
 		const int y = id / mo.x;
 

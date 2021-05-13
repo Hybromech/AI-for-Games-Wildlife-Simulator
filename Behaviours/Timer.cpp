@@ -1,9 +1,11 @@
 #pragma once
 #include <iostream>
+///A count down timer.
+/**
+*/
 struct Timer
 {
 	//Behaviours::PathFollowBehaviour::PathFollowBehaviour(float speed) : m_speed{ speed } {}
-	
 		double currentTime;
 		float endFrame;
 		float startFrame;

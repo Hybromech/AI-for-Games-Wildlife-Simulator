@@ -44,7 +44,9 @@ void ResetGraph(Node* start, Node* end) {
         start->gscore = 100000000;
     }
 }
-
+///Unload texture from GPU memory (VRAM).
+/**
+*/
 class ManagedTexture
 {
     Texture texture;
@@ -73,8 +75,8 @@ int main(int argc, char* argv[])
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
     SetTargetFPS(75);
     
-    auto mp = ReadaMapInfo("D:/Andrew/AIE/Diploma of Digital and Interactive Games/Subjects/AI for Games/AI_Game/Path_Finding/Map.map"); //Load in map.
-    mp.tile_atlas = LoadTexture("D:/Andrew/AIE/Diploma of Digital and Interactive Games/Subjects/AI for Games/AI_Game/textures/forest_tiles.png");
+    auto mp = ReadaMapInfo("Path_Finding/Map.map"); //Load in map.
+    mp.tile_atlas = LoadTexture("textures/forest_tiles.png");
     mp.tilesize = tz;
 
     Rectangle rectarray[] = {

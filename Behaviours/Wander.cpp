@@ -60,6 +60,7 @@ Circle Wander::updateCircle(Circle c, float min, float max, float radius, bool g
 void Wander::DrawDebugCircle()
 {
 	//std::cout << "Drawing circle" << std::endl;
+	//!Draws a debug visual element on screen.
 	DrawCircleLines(circle.origin.x, circle.origin.y, circle.radius, { 255,0,0,255 });//draw the circle.
 	DrawCircle(circle.target_point.x, circle.target_point.y, 8, { 0,0,255,255 });
 }

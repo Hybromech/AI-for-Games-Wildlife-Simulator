@@ -1,0 +1,83 @@
+\hypertarget{class_wander}{}\doxysection{Wander Class Reference}
+\label{class_wander}\index{Wander@{Wander}}
+
+
+A behaviour that makes the agent wander in a random direction.  
+
+
+
+
+{\ttfamily \#include $<$Wander.\+h$>$}
+
+Inheritance diagram for Wander\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_wander}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wander_a375ba90ce3a2e1fd13988602ba5d589a}{Wander}} (\mbox{\hyperlink{class_behaviours_1_1_steering_behaviour}{Behaviours\+::\+Steering\+Behaviour}} $\ast$sb, \mbox{\hyperlink{struct_circle}{Circle}} c, \mbox{\hyperlink{struct_timer}{Timer}} t)
+\item 
+\mbox{\hyperlink{class_wander_a80df464a7d4a22b8989d2a90a24e7aec}{$\sim$\+Wander}} ()
+\item 
+bool \mbox{\hyperlink{class_wander_a24e89a77fba85c34dbc92843431041c4}{Update}} (\mbox{\hyperlink{class_agent}{Agent}} $\ast$, float deltatime)
+\begin{DoxyCompactList}\small\item\em Sets the agents speed to wanderspeed, updates the circle, If the \mbox{\hyperlink{struct_timer}{Timer}} expires then it randomises the target point on the circle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_circle}{Circle}} \mbox{\hyperlink{class_wander_af3c5a96606def4562ac63036a6a4c36f}{update\+Circle}} (\mbox{\hyperlink{struct_circle}{Circle}} c, float min, float max, float radius, bool gen\+\_\+rand)
+\item 
+void \mbox{\hyperlink{class_wander_a707e4067947626df06a0d049d670d04f}{Draw\+Debug\+Circle}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A behaviour that makes the agent wander in a random direction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_wander_a375ba90ce3a2e1fd13988602ba5d589a}\label{class_wander_a375ba90ce3a2e1fd13988602ba5d589a}} 
+\index{Wander@{Wander}!Wander@{Wander}}
+\index{Wander@{Wander}!Wander@{Wander}}
+\doxysubsubsection{\texorpdfstring{Wander()}{Wander()}}
+{\footnotesize\ttfamily Wander\+::\+Wander (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_behaviours_1_1_steering_behaviour}{Behaviours\+::\+Steering\+Behaviour}} $\ast$}]{sb,  }\item[{\mbox{\hyperlink{struct_circle}{Circle}}}]{c,  }\item[{\mbox{\hyperlink{struct_timer}{Timer}}}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_wander_a80df464a7d4a22b8989d2a90a24e7aec}\label{class_wander_a80df464a7d4a22b8989d2a90a24e7aec}} 
+\index{Wander@{Wander}!````~Wander@{$\sim$Wander}}
+\index{````~Wander@{$\sim$Wander}!Wander@{Wander}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wander()}{~Wander()}}
+{\footnotesize\ttfamily Wander\+::$\sim$\+Wander (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_wander_a707e4067947626df06a0d049d670d04f}\label{class_wander_a707e4067947626df06a0d049d670d04f}} 
+\index{Wander@{Wander}!DrawDebugCircle@{DrawDebugCircle}}
+\index{DrawDebugCircle@{DrawDebugCircle}!Wander@{Wander}}
+\doxysubsubsection{\texorpdfstring{DrawDebugCircle()}{DrawDebugCircle()}}
+{\footnotesize\ttfamily void Wander\+::\+Draw\+Debug\+Circle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_wander_a24e89a77fba85c34dbc92843431041c4}\label{class_wander_a24e89a77fba85c34dbc92843431041c4}} 
+\index{Wander@{Wander}!Update@{Update}}
+\index{Update@{Update}!Wander@{Wander}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily bool Wander\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_agent}{Agent}} $\ast$}]{agent,  }\item[{float}]{deltatime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the agents speed to wanderspeed, updates the circle, If the \mbox{\hyperlink{struct_timer}{Timer}} expires then it randomises the target point on the circle. 
+
+
+
+Implements \mbox{\hyperlink{class_behaviour_aa1c0ee4ad7bddb70a6111201625645a4}{Behaviour}}.
+
+\mbox{\Hypertarget{class_wander_af3c5a96606def4562ac63036a6a4c36f}\label{class_wander_af3c5a96606def4562ac63036a6a4c36f}} 
+\index{Wander@{Wander}!updateCircle@{updateCircle}}
+\index{updateCircle@{updateCircle}!Wander@{Wander}}
+\doxysubsubsection{\texorpdfstring{updateCircle()}{updateCircle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_circle}{Circle}} Wander\+::update\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_circle}{Circle}}}]{c,  }\item[{float}]{min,  }\item[{float}]{max,  }\item[{float}]{radius,  }\item[{bool}]{gen\+\_\+rand }\end{DoxyParamCaption})}
+
+Generates a random vector. Min and max are the range that the random angle will be generated. Radius is size of the wander circle. Gen\+\_\+rand, should the method generate a random vector. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\+Behaviours/\mbox{\hyperlink{_wander_8h}{Wander.\+h}}\item 
+D\+:/\+Andrew/\+AIE/\+Diploma of Digital and Interactive Games/\+Subjects/\+AI for Games/\+AI\+\_\+\+Game/\+Behaviours/\mbox{\hyperlink{_wander_8cpp}{Wander.\+cpp}}\end{DoxyCompactItemize}
